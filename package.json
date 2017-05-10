@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --content-base static/",
     "start": "node app",
-    "deploy": "npm run build && git commit -am\"deploying to heroku\" && git push heroku master",
+    "deploy": "git add . && npm run build && git commit -am\"deploying to heroku\" && git push heroku master",
     "build": "webpack --content-base static/"
   },
   "author": "ib.johansen@acando.no",
