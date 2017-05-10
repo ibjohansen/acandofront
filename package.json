@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base build/",
+    "dev": "webpack-dev-server --content-base static/",
     "start": "node app",
-    "build": "webpack --content-base build/"
+    "build": "webpack --content-base static/"
   },
   "author": "ib.johansen@acando.no",
   "license": "ISC",
