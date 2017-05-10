@@ -3,6 +3,8 @@ const app = express();
 
 app.use(express.static('static'));
 
-app.listen(3000, () => {
-  console.log('magic-dreams listening on port 3000!') //eslint-disable-line no-console
+app.set('port', (process.env.PORT || 3000));
+
+app.listen(app.get('port'), () => {
+  console.log('Magic dreams is running on port', app.get('port'));
 });
