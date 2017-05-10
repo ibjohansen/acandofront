@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --content-base static/",
-    "start": "npm install && npm run build && node app",
+    "start": "node app",
+    "deploy": "npm run build && git commit -am\"deploying to heroku\" && git push heroku master",
     "build": "webpack --content-base static/"
   },
   "author": "ib.johansen@acando.no",
@@ -49,6 +50,7 @@
     "webpack": "^1.13.3"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }
