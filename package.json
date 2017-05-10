@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --content-base build/",
+    "start": "node app",
     "build": "webpack --content-base build/"
   },
   "author": "ib.johansen@acando.no",
