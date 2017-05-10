@@ -8,6 +8,7 @@ class Main extends React.Component {
     return (
       <div className="main-container">
         <div className="background-sky"></div>
+        <div className="background-stars"></div>
         <div className="background-man"></div>
         <Ad1/>
       </div>
