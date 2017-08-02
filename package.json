@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base static/",
-    "start": "node app",
+    "dev": "cross-env NODE_ENV=development node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "deploy": "npm run build && git commit -am\"deploying to heroku\" && git push heroku master",
-    "build": "webpack --content-base static/"
+    "build": "webpack --config webpack.config.prod"
   },
   "author": "ib.johansen@acando.no",
   "license": "ISC",
@@ -47,12 +47,16 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.15.0"
+    "webpack": "^3.4.1"
   },
   "dependencies": {
+    "babel-preset-env": "^1.6.0",
+    "compression": "^1.7.0",
+    "cross-env": "^5.0.2",
     "express": "^4.15.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^2.6.1",
+    "webpack-hot-middleware": "^2.18.2"
   }
 }

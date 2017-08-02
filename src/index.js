@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Ad1 from './ads/ad1';
+import Ad2 from './ads/ad2';
 import './css/main.scss';
 
 class Main extends React.Component {
@@ -17,4 +18,3 @@ class Main extends React.Component {
 }
 
 ReactDOM.render(<Main/>, document.getElementById('app'));
-
