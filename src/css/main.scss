@@ -119,10 +119,15 @@ body, html {
 .ball-container-2 {
   transform-origin: left;
 }
-.ball-head-1 {
+.ball-head-1,
+.ball-head-2 {
   width: 20px;
   height: 20px;
   border-radius: 100%;
+}
+
+.ball-head-2 {
+  opacity: 0;
 }
 
 .blue {

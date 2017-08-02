@@ -3,8 +3,6 @@ import Anime from 'react-anime';
 
 export default class AnimationAd extends React.Component {
 
-    
-
     componentDidMount () {
 
     }
@@ -28,7 +26,8 @@ export default class AnimationAd extends React.Component {
                                 loop={false}
                                 delay={(el, index) => index * heightDistance}
                                 translateX={(el, index) => [(index * ballSize) + ballSize, (index*ballSize)+ballSize]}
-                                scaleY={(el, index) => [1, 10.5 + (index * 1.5)]}>
+                                scaleY={(el, index) => [1, 10.5 + (index * 1.5)]}
+                            >
                             <div className="ball-container ball-container-1 white"></div>
                             <div className="ball-container ball-container-1 white"></div>
                             <div className="ball-container ball-container-1 white"></div>
@@ -74,12 +73,15 @@ export default class AnimationAd extends React.Component {
                                 delay={(el, index) => (index * 240)+700}
                                 translateX={(el, index) => [(index * ballSize) + ballSize, (index*ballSize) + 230]}
                                 translateY={(el, index) => [200 + (index * 30), 200 + (index * 30)]}
-                                begin={(anime) => {console.log('begin: ', anime); }}
+                                opacity={[
+                                    { value: 0.5, duration: 5, delay: 0 },
+                                    { value: 1, duration: 695, delay: 0 }
+                                ]}
                             >
-                            <div className="ball-container ball-head-1 white"></div>
-                            <div className="ball-container ball-head-1 white"></div>
-                            <div className="ball-container ball-head-1 white"></div>
-                            <div className="ball-container ball-head-1 white"></div>
+                            <div className="ball-container ball-head-2 white"></div>
+                            <div className="ball-container ball-head-2 white"></div>
+                            <div className="ball-container ball-head-2 white"></div>
+                            <div className="ball-container ball-head-2 white"></div>
                         </Anime>
                     </div>
                 </div>
