@@ -66,7 +66,8 @@ export default class AnimationAd2 extends React.Component {
             translateX: (el, index) => [(index * ballSize) + ballSize, (index * ballSize) + ballSize],
             translateY: (el, index) => [202 + (index * 30), 202 + (index * 30)],
             duration: 1,
-            delay: (el, index) => 1400+(index*heightDistance)
+            delay: (el, index) => 1400+(index*heightDistance),
+            opacity: [0, 1]
 
         });
         anime({
