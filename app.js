@@ -1,5 +1,4 @@
 const express = require('express');
-const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const compression = require('compression');
@@ -14,6 +13,7 @@ console.log('NODE_ENV: ', process.env.NODE_ENV);
 if (process.env.NODE_ENV !== 'production') {
   app.use(helmet());
   app.use(helmet.hidePoweredBy({ setTo: 'Atari 2600' }))
+  const webpack = require('webpack');
   let config = require('./webpack.config.dev');
   let bundler = webpack(config);
   
