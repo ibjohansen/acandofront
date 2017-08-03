@@ -55,7 +55,7 @@ export default class CityNightAd extends React.Component {
         });*/
         if (window.DeviceOrientationEvent) {
             let throttled = throttle(this.handleOrientation.bind(this), 10);
-            window.addEventListener("deviceorientation", throttled, true);
+            window.addEventListener("deviceorientation", this.handleOrientation.bind(this), true);
         }
     }
 
@@ -74,8 +74,12 @@ export default class CityNightAd extends React.Component {
             transform: `translate3d(${movement}%, 0, 0)`
         };
         return (
-            <section className="city-night-ad">
+            <section className="city-night-ad main-container">
                 <h1>Hva gir deg inspirasjon?</h1>
+                {/* <h3>{this.state.alpha}</h3>
+                <h3>{this.state.beta}</h3>
+                <h3>{this.state.gamma}</h3>
+                <h3>{window.DeviceOrientationEvent ? 'support' : 'not'}</h3> */}
                 <div className="city-night-image" style={imageStyling}></div>
             </section>
         );

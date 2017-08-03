@@ -24,22 +24,20 @@ if (process.env.NODE_ENV !== 'production') {
   /*app.use(webpackHotMiddleware(bundler, {
     log: console.log, // eslint-disable-line no-console
   }));*/
-  app.get('/super-secret', (req, res, next) => {
-    res.status(200).json({ coded_message: 'jjj.cnfgrova.pbz/2Zl0afpP' });
-  });
-  app.get("*", (req, res, next) => {
-      res.sendFile(path.join(__dirname, 'static/index.html'));
-  });
-  
 } else {
   app.use(helmet());
   app.use(helmet.hidePoweredBy({ setTo: 'Atari 2600' }))
   app.use(compression());
   app.use(express.static(__dirname + '/static'));
-  app.get('/super-secret', (req, res, next) => {
-    res.status(200).json({ coded_message: 'jjj.cnfgrova.pbz/2Zl0afpP' });
-  });
+
 }
+
+app.get('/super-secret', (req, res, next) => {
+  res.status(200).json({ coded_message: 'jjj.cnfgrova.pbz/2Zl0afpP' });
+});
+app.get("*", (req, res, next) => {
+    res.sendFile(path.join(__dirname, 'static/index.html'));
+});
 
 app.listen(app.get('port'), () => {
   console.log('Magic dreams is running on port', app.get('port'));

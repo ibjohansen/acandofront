@@ -17,6 +17,13 @@ $color-coolgrey: #474F72;
 $color-white: #fff;
 $color-black: #000;
 
+// Get proper box-sizing.
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body, html {
   border: 0;
@@ -28,6 +35,12 @@ body, html {
 // Remove default margins.
 h1,h2,h3,h4,h5 {
   margin: 0;
+}
+a {
+  color: $color-white;
+}
+h1 {
+  line-height: 1.1;
 }
 
 #app {
@@ -41,13 +54,27 @@ h1,h2,h3,h4,h5 {
 
   .main-body,
   .main-container,
-  .animation-ad {
+  .animation-ad,
+  .landing-page {
     width: inherit;
     height: inherit;
   }
 
   .animation-ad {
     background-color: $color-coolgrey;
+    h1 {
+      padding: 15px;
+    }
+    .animation-title-offset {
+      transform: translate3d(320px, 0, 0);
+    }
+  }
+  .landing-page {
+    background-color: $color-coolgrey;
+    padding: 15px;
+    h1 {
+      
+    }
   }
   .main-container {
     background-color: black;
@@ -123,7 +150,8 @@ h1,h2,h3,h4,h5 {
       bottom: 50%;
       padding: 2%;
     }
-    .city-night-ad {
+  }
+  .city-night-ad {
       width: 100%;
       height: 100%;
       position: relative;
@@ -131,6 +159,7 @@ h1,h2,h3,h4,h5 {
         margin: 0;
         position: relative;
         z-index: 10;
+        padding: 15px;
       }
     }
     .city-night-image {
@@ -140,14 +169,13 @@ h1,h2,h3,h4,h5 {
       background-image: $bg-city-night;
       background-repeat: no-repeat;
       background-position: 0% 0%;
-      background-size: 100%;
+      background-size: cover;
       width: 200%;
       height: 100%;
       z-index: 5;
       //transition: transform 0.3s ease-out;
       
     }
-  }
 }
 
 .animation-container {

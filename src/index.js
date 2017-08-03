@@ -4,6 +4,7 @@ import AdContainer from './ads/ad-container';
 import ConsoleAd1 from './console-ads/ad1';
 import CityNightAd from './ads/city-night-ad';
 import AnimationAd from './ads/animation-ad';
+import LandingPage1 from './landing-page/landing-page-1';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './css/main.scss';
 
@@ -17,6 +18,7 @@ const Main = () => {
         <Route path="/ad1" component={AdContainer}/>
         <Route path="/city-night-ad" component={CityNightAd}/>
         <Route path="/animation-ad" component={AnimationAd}/>
+        <Route path="/landing-page" component={LandingPage1}/>
       </div>
     </Router>
   );
