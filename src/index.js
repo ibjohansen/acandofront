@@ -12,7 +12,7 @@ ConsoleAd1();
 const Main = () => {
   return (
     <Router>
-      <div className="main-container">
+      <div className="main-body">
         <Route exact path="/" component={AdContainer}/>
         <Route path="/ad1" component={AdContainer}/>
         <Route path="/city-night-ad" component={CityNightAd}/>

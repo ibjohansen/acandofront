@@ -1,6 +1,11 @@
-$bg-img-nightsky: url('../images/night_sky_5.jpg');
-$bg-img-stars: url('../images/night_sky_5_transp.png');
-$bg-img-man: url('../images/man_on_land.png');
+$bg-img-nightsky-small: url('../images/night_sky_5_small.jpg');
+$bg-img-nightsky-medium: url('../images/night_sky_5_medium.jpg');
+$bg-img-nightsky-large: url('../images/night_sky_5_large.jpg');
+$bg-img-nightsky: -webkit-image-set(url('../images/night_sky_5_small.jpg') 1x), -webkit-image-set(url('../images/night_sky_5_medium.jpg') 2x) -webkit-image-set(url('../images/night_sky_5_large.jpg') 3x);
+$bg-img-stars: url('../images/night_sky_5_transp_medium.png');
+$bg-img-man-medium: url('../images/man_on_land_medium.png');
+$bg-img-man-large: url('../images/man_on_land_large.png');
+$bg-img-man: -webkit-image-set(url('../images/man_on_land_medium.png') 1x), -webkit-image-set(url('../images/man_on_land_medium.png') 2x), -webkit-image-set(url('../images/man_on_land_large.png') 3x);
 $bg-city-night: url('../images/city_night_2.jpg');
 
 $color-orange: #FF4C05;
@@ -18,8 +23,11 @@ body, html {
   margin: 0;
   width: 100%;
   height: 100%;
-  //background-color: black;
-  background-color: $color-coolgrey;
+}
+
+// Remove default margins.
+h1,h2,h3,h4,h5 {
+  margin: 0;
 }
 
 #app {
@@ -31,37 +39,82 @@ body, html {
   line-height: 26.4px;
   color: white;
 
-  .main-container {
+  .main-body,
+  .main-container,
+  .animation-ad {
     width: inherit;
     height: inherit;
+  }
 
-    .background-sky {
+  .animation-ad {
+    background-color: $color-coolgrey;
+  }
+  .main-container {
+    background-color: black;
+
+    .background-sky-container,
+    .background-stars-container {
       position: absolute;
       width: inherit;
       height: inherit;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+    .background-sky {
+      position: absolute;
+      width: 200%;
+      height: 100%;
+      // Set image without using src-set incase there is no browser support for it.
+      background-image: $bg-img-nightsky-medium;
+      // Use background with src-set.
       background-image: $bg-img-nightsky;
       background-repeat: no-repeat;
-      background-position: bottom right;
-      animation: MOVE-LEFT 120s linear infinite alternate;
+      background-size: cover;
+      animation: MOVE-LEFT 100s linear infinite alternate;
+      @media (min-width: 414px) {
+        background-image: $bg-img-nightsky-medium;
+        background-image: $bg-img-nightsky;
+        animation: MOVE-LEFT 100s linear infinite alternate;
+      }
+      @media (min-width: 1024px) {
+        background-image: $bg-img-nightsky-large;
+        background-image: $bg-img-nightsky;
+        animation: MOVE-LEFT 120s linear infinite alternate;
+      }
     }
 
     .background-stars {
       position: absolute;
-      width: inherit;
-      height: inherit;
+      width: 200%;
+      height: 100%;
       background-image: $bg-img-stars;
       background-repeat: no-repeat;
-      background-position: bottom left;
-      animation: MOVE-RIGHT 120s linear infinite alternate;
+      background-size: cover;
+      animation: MOVE-RIGHT 80s linear infinite alternate;
     }
 
     .background-man {
       position: absolute;
       width: inherit;
       height: inherit;
+      // Set image without using src-set incase there is no browser support for it.
+      background-image: $bg-img-man-medium;
+      // Use background with src-set.
       background-image: $bg-img-man;
       background-repeat: no-repeat;
-      background-position: bottom right;
+      // Width should be auto-adjusted and height should be about 30% of the screen.
+      background-size: auto 30%;
+      // All the way to the bottom and almost all the way to the right.
+      background-position: 90% 100%;
+      @media (min-width: 414px) {
+        background-image: $bg-img-man-medium;
+        background-image: $bg-img-man;
+      }
+      @media (min-width: 1024px) {
+        background-image: $bg-img-man-large;
+        background-image: $bg-img-man;
+      }
     }
 
     .ad1 {
@@ -149,17 +202,21 @@ body, html {
 
 @keyframes MOVE-LEFT {
   from {
-    background-position: bottom right;
+    //background-position: bottom right;
+    transform: translate3d(0, 0, 0);
   }
   to {
-    background-position: bottom left;
+    transform: translate3d(-50%, 0, 0);
+    //background-position: bottom left;
   }
 }
 @keyframes MOVE-RIGHT {
   from {
-    background-position: bottom left;
+    //background-position: bottom left;
+    transform: translate3d(-50%, 0, 0);
   }
   to {
-    background-position: bottom right;
+    //background-position: bottom right;
+    transform: translate3d(0, 0, 0);
   }
 }
