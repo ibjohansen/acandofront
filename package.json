@@ -10,6 +10,7 @@
     "deploy": "npm run build && git commit -am\"deploying to heroku\" && git push heroku master",
     "lint": "eslint ./src --ext=.js,.jsx",
     "lint-fix": "eslint ./src --ext=.js,.jsx --fix",
+    "prebuild": "npm run lint",
     "build": "webpack --config webpack.config.prod"
   },
   "author": "ib.johansen@acando.no",
