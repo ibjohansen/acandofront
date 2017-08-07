@@ -14,12 +14,13 @@ export default class AnimationAd2 extends React.Component {
         const ballSize = 20; //in pixels
         const colorOrange = '#FF4C05';
         const colorWhite = '#fff';
+        const initialDelay = 500;
 
         anime({
             targets: '.ball-container-1',
             easing: "easeOutCubic",
             duration: 700,
-            delay: (el, index) => index * heightDistance,
+            delay: (el, index) => (index * heightDistance)+initialDelay,
             translateX: (el, index) => {
                 return [(index * ballSize) + ballSize, (index*ballSize)+ballSize]
             },
@@ -31,7 +32,7 @@ export default class AnimationAd2 extends React.Component {
             targets: '.ball-container-2',
             easing: "easeOutCubic",
             duration: 700,
-            delay: (el, index) => 1400+(index*heightDistance),
+            delay: (el, index) => initialDelay+1400+(index*heightDistance),
             translateX: [10, 10],//(el, index) => [(index * ballSize) + ballSize, (index*ballSize)+ballSize],
             translateY: [-2, -2],//(el, index) => [200 + (index * 30), 200 + (index * 30)],
             scaleX: (el, index) => [0, 20.5]
@@ -43,16 +44,16 @@ export default class AnimationAd2 extends React.Component {
                 easing: 'easeOutCubic',
                 translateX: [
                     { value: (index*ballSize)+ballSize, duration: 1},
-                    { value: ((index*ballSize)+ballSize + (20.5*ballSize)), duration: 700, delay: 1400+(index*heightDistance)}
+                    { value: ((index*ballSize)+ballSize + (20.5*ballSize)), duration: 700, delay: initialDelay+1400+(index*heightDistance)}
                     //{ value: (index*ballSize) + window.innerWidth*2, duration: 700, delay: 2400}
                 ],
                 translateY: [
                     { value: 10, duration: 1},
-                    { value: 200 + (index*30), duration: 700, delay: index*heightDistance}
+                    { value: 200 + (index*30), duration: 700, delay: initialDelay+(index*heightDistance)}
                 ],
                 background: [
                     { value: colorOrange, duration: 1},
-                    { value: colorWhite, duration: 300, delay: 1100+(index*heightDistance)}
+                    { value: colorWhite, duration: 300, delay: initialDelay+(1100+(index*heightDistance))}
                 ]
             };
         };
@@ -66,7 +67,7 @@ export default class AnimationAd2 extends React.Component {
             translateX: (el, index) => [(index * ballSize) + ballSize, (index * ballSize) + ballSize],
             translateY: (el, index) => [202 + (index * 30), 202 + (index * 30)],
             duration: 1,
-            delay: (el, index) => 1400+(index*heightDistance),
+            delay: (el, index) => initialDelay+1400+(index*heightDistance),
             opacity: [0, 1]
 
         });
@@ -74,7 +75,7 @@ export default class AnimationAd2 extends React.Component {
             targets: '.animation-ad-container',
             easing: 'easeOutCubic',
             translateX: -window.innerWidth,
-            delay: 2500,
+            delay: (initialDelay/2)+2500,
             duration: 700
         });
     }
