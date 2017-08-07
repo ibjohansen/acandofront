@@ -15,8 +15,8 @@ const sharpDesignPath = (startX, startY) => {
 export default class AnimationText2 extends React.Component {
 
   render() {
-    const orangePath = sharpDesignPath(5, 0);
-    const whitePath = sharpDesignPath(3, 0);
+    const orangePath = sharpDesignPath(6, 0);
+    const whitePath = sharpDesignPath(3, -1);
     return (
       <section className="animation-ad text-animation-ad">
         <h1>
