@@ -277,8 +277,8 @@ h1 {
     background: #474F72;
   }
   svg {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 110px;
   }
   path {
     stroke: $color-orange;
@@ -293,7 +293,7 @@ h1 {
   path.white {
     fill: transparent;
     background: transparent;
-    stroke: $color-white;
+    stroke: #BFBFBF;
     stroke-width: 1px;
     animation: char-white-anim ease-in-out 2s forwards;
   }
