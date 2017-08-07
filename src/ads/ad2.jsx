@@ -4,9 +4,9 @@ export default class Ad1 extends React.Component {
   render() {
     return (
       <section className="ad1">
-          <h1>
+        <h1>
             Er du en som simpelthen elsker teknologi?
-          </h1>
+        </h1>
 
         <p>
           Tenker du på Node og JavaScript når du hører ordet fullstack?
@@ -22,7 +22,7 @@ export default class Ad1 extends React.Component {
       </section>
     );
   }
-};
+}
 
 
 

@@ -1,0 +1,21 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": 2
+    },
+    "extends": [
+        "nrk",
+        "nrk/rules/react",
+        "nrk/rules/jsx"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}
