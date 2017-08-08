@@ -26,16 +26,16 @@ if (process.env.NODE_ENV !== 'production') {
   }));*/
 } else {
   app.use(helmet());
-  app.use(helmet.hidePoweredBy({ setTo: 'Atari 2600' }))
+  app.use(helmet.hidePoweredBy({ setTo: 'Atari 2600' }));
   app.use(compression());
-  app.use(express.static(__dirname + '/static'));
+  
 
 }
-
+app.use(express.static(__dirname + '/static'));
 app.get('/super-secret', (req, res, next) => {
   res.status(200).json({ coded_message: 'jjj.cnfgrova.pbz/2Zl0afpP' });
 });
-app.get("*", (req, res, next) => {
+app.get(['/*ad*', '/'], (req, res, next) => {
     res.sendFile(path.join(__dirname, 'static/index.html'));
 });
 

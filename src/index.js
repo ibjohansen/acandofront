@@ -7,6 +7,7 @@ import AnimationAd from './ads/animation-ad';
 import AnimationAd2 from './ads/animation-ad2';
 import AnimationText from './ads/animation-text';
 import AnimationText2 from './ads/animation-text2';
+import VideoAd from './ads/video-ad';
 import LandingPage1 from './landing-page/landing-page-1';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './css/main.scss';
@@ -23,6 +24,7 @@ const Main = () => (
       <Route path="/animation-ad2" component={AnimationAd2} />
       <Route path="/animation-text" component={AnimationText} />
       <Route path="/animation-text2" component={AnimationText2} />
+      <Route path="/video-ad" component={VideoAd} />
       <Route path="/landing-page" component={LandingPage1} />
     </div>
   </Router>
