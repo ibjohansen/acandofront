@@ -1,33 +1,50 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import AdContainer from './ads/ad-container';
-import consoleAd1 from './console-ads/ad1';
-import CityNightAd from './ads/city-night-ad';
-import AnimationAd from './ads/animation-ad';
-import AnimationAd2 from './ads/animation-ad2';
-import AnimationText from './ads/animation-text';
-import AnimationText2 from './ads/animation-text2';
-import VideoAd from './ads/video-ad';
-import LandingPage1 from './landing-page/landing-page-1';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import VideoAd from 'components/ads/video-ad';
+import GifAd from 'components/ads/gif-ad';
 import './css/main.scss';
 
-consoleAd1();
+const Gif1 = () => (<GifAd
+  imageUrl="images/ocean.gif"
+  // 50% is default
+  backgroundPositionX="50%"
+  backgroundPositionY="50%"
+  ogSiteName="first gif test"
+  ogUrl="/images/ocean.gif"
+  ogImage="/images/ocean.gif"
+  ogType="video.webm"
+  ogTitle="OceanGif yay"
+  ogDescription="This is a gif of an ocean"
+  ogImageWidth="497"
+  ogImageHeight="373"
+/>);
 
-const Main = () => (
-  <Router>
-    <div className="main-body">
-      <Route exact path="/" component={AdContainer} />
-      <Route path="/ad1" component={AdContainer} />
-      <Route path="/city-night-ad" component={CityNightAd} />
-      <Route path="/animation-ad" component={AnimationAd} />
-      <Route path="/animation-ad2" component={AnimationAd2} />
-      <Route path="/animation-text" component={AnimationText} />
-      <Route path="/animation-text2" component={AnimationText2} />
-      <Route path="/video-ad" component={VideoAd} />
-      <Route path="/landing-page" component={LandingPage1} />
-    </div>
-  </Router>
-);
+const Gif2 = () => (<GifAd
+  imageUrl="images/ocean2.gif"
+  // 50% is default
+  backgroundPositionX="10%"
+  backgroundPositionY="20%"
+  ogSiteName="second gif test"
+  ogUrl="/images/ocean2.gif"
+  ogImage="/images/ocean2.gif"
+  ogType="video.webm"
+  ogTitle="this is number 2"
+  ogDescription="This is a gif of an ocean"
+  ogImageWidth="500"
+  ogImageHeight="717"
+/>);
 
-ReactDOM.render(<Main />, document.getElementById('app'));
+
+export default class Main extends React.Component {
+  render () {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={VideoAd} />
+          <Route exact path="/gif1" component={Gif1} />
+          <Route exact path="/gif2" component={Gif2} />
+        </Switch>
+      </div>
+    );
+  }
+}
