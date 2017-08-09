@@ -6,7 +6,7 @@ const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.
 
 class VideoAd extends React.Component {
   render() {
-    const { mp4Url, webmUrl, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
+    const { mp4Url, webmUrl, videoSlogan, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
 
     /*eslint-disable react/self-closing-comp*/
     return (
@@ -22,6 +22,9 @@ class VideoAd extends React.Component {
           <meta property="og:video:width" content={ogVideoWidth} ></meta>
           <meta property="og:video:height" content={ogVideoHeight} ></meta>
         </Helmet>
+        <div className="video-slogan">
+          <h1>{videoSlogan}</h1>
+        </div>
         <video className="video-bg" preload="meta" autoPlay={true}>
           {mp4Url && (
             <source
@@ -46,6 +49,7 @@ class VideoAd extends React.Component {
 VideoAd.propTypes = {
   mp4Url: PropTypes.string,
   webmUrl: PropTypes.string,
+  videoSlogan: PropTypes.string,
   headTitle: PropTypes.string,
   ogSiteName: PropTypes.string,
   ogUrl: PropTypes.string,

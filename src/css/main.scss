@@ -284,7 +284,9 @@ h1 {
   z-index: 5;
  //background-image: url("../images/ocean.gif");
 }
-.gif-slogan {
+
+.gif-slogan,
+.video-slogan {
   position: fixed;
   z-index: 10;
   color: $color-white;

@@ -39,8 +39,7 @@ const Gif2 = () => (<GifAd
 
 const Video1 = () => (<VideoAd
   mp4Url={sampleVideo}
-  backgroundPositionX="50%"
-  backgroundPositionY="50%"
+  videoSlogan="Dette er tekst som vekker følelser"
   ogSiteName="first video test"
   ogUrl={sampleVideo}
   ogVideoType="video/mp4"

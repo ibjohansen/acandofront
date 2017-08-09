@@ -6,8 +6,8 @@ const config = [
     entry: './src/index.js',
     output: {
       path: path.join(__dirname, 'public'),
-      filename: 'bundle.js',
-      publicPath: '/public/'
+      filename: 'js/bundle.js',
+      publicPath: '/'
 
     },
     devtool: 'source-map',
@@ -49,9 +49,9 @@ const config = [
     entry: './src/server.jsx',
     output: {
       path: path.join(__dirname, 'public'),
-      filename: 'server.js',
+      filename: 'js/server.js',
       libraryTarget: 'commonjs2',
-      publicPath: '/public/'
+      publicPath: '/'
     },
     devtool: 'source-map',
     module: {
