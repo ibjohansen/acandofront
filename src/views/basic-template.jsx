@@ -1,6 +1,6 @@
 export default ({ markup, helmet }) => {
   return `<!doctype html>
-    <html ${helmet.htmlAttributes.toString()}>
+    <html ${helmet.htmlAttributes.toString()} prefix="og: http://ogp.me/ns#">
     <head>
       ${helmet.title.toString()}
       ${helmet.meta.toString()}
