@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 
-const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.herokuapp.com' : '';
+const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.herokuapp.com' : 'test';
 
 class GifAd extends React.Component {
   render() {
@@ -24,7 +24,7 @@ class GifAd extends React.Component {
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
           <meta property="og:type" content={ogType} ></meta>
-          <meta property="og:image" content={`${urlPrefix}/${ogImage}`} ></meta>
+          <meta property="og:image" content={`${urlPrefix}${ogImage}`} ></meta>
           <meta property="og:image:width" content={ogImageWidth} ></meta>
           <meta property="og:image:height" content={ogImageHeight} ></meta>
         </Helmet>
