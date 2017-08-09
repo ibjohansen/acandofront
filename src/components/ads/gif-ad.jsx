@@ -7,7 +7,7 @@ const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.
 
 class GifAd extends React.Component {
   render() {
-    const { imageUrl, imageSlogan, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
+    const { imageUrl, imageSlogan, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, location, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
 
     const gifStyling = {
       backgroundImage: `url("${imageUrl}")`,
@@ -20,7 +20,7 @@ class GifAd extends React.Component {
         <Helmet>
           <title>{headTitle}</title>
           <meta property="og:site_name" content={ogSiteName} ></meta>
-          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} ></meta>
+          <meta property="og:url" content={`${urlPrefix}${location.pathname}`} ></meta>
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
           <meta property="og:type" content={ogType} ></meta>
@@ -45,7 +45,7 @@ GifAd.propTypes = {
   backgroundPositionY: PropTypes.string,
   headTitle: PropTypes.string,
   ogSiteName: PropTypes.string,
-  ogUrl: PropTypes.string,
+  location: PropTypes.any,
   ogTitle: PropTypes.string,
   ogDescription: PropTypes.string,
   ogType: PropTypes.string,
