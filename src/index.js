@@ -40,11 +40,13 @@ const Gif2 = withRouter((props) => (<GifAd
   ogImageHeight="717"
 />));
 
+// VideoSlogan can contain a Link to proper landing page.
 const Video1 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={sampleVideo}
   imageUrl={poster1}
-  videoSlogan="Dette er tekst som vekker følelser"
+  videoSlogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
+  videoSloganStyling={{top: '50%', left: '2%', maxWidth: '300px'}}
   ogSiteName="first video test"
   ogUrl={sampleVideo}
   ogVideoType="video/mp4"

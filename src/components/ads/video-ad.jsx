@@ -7,7 +7,7 @@ const cacheBusting = `?bust=${new Date().getTime()}`;
 
 class VideoAd extends React.Component {
   render() {
-    const { mp4Url, webmUrl, imageUrl, videoSlogan, headTitle, ogSiteName, location, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
+    const { mp4Url, webmUrl, imageUrl, videoSlogan, videoSloganStyling, headTitle, ogSiteName, location, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
 
     /*eslint-disable react/self-closing-comp*/
     return (
@@ -26,10 +26,10 @@ class VideoAd extends React.Component {
           <meta property="og:video:height" content={ogVideoHeight} ></meta>
           <meta property="og:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} ></meta>
         </Helmet>
-        <div className="video-slogan">
-          <h1>{videoSlogan}</h1>
+        <div className="video-slogan" style={videoSloganStyling}>
+          {videoSlogan}
         </div>
-        <video className="video-bg" preload="meta" autoPlay={true} muted={true}>
+        <video className="video-bg" preload="meta" autoPlay={true} muted={true} loop={true}>
           {mp4Url && (
             <source
               src={mp4Url}
@@ -55,7 +55,8 @@ VideoAd.propTypes = {
   mp4Url: PropTypes.string,
   webmUrl: PropTypes.string,
   imageUrl: PropTypes.string,
-  videoSlogan: PropTypes.string,
+  videoSlogan: PropTypes.object,
+  videoSloganStyling: PropTypes.object,
   headTitle: PropTypes.string,
   ogSiteName: PropTypes.string,
   ogUrl: PropTypes.string,
