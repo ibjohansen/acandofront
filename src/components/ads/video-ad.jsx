@@ -8,18 +8,19 @@ class VideoAd extends React.Component {
   render() {
     const { mp4Url, webmUrl, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
 
+    /*eslint-disable react/self-closing-comp*/
     return (
       <div className="media-ad-container">
         <Helmet>
           <title>{headTitle}</title>
-          <meta property="og:site_name" content={ogSiteName} />
-          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} />
-          <meta property="og:title" content={ogTitle} />
-          <meta property="og:description" content={ogDescription} />
-          <meta property="og:type" content={ogType} />
-          <meta property="og:image" content={`${urlPrefix}${ogImage}`} />
-          <meta property="og:image:width" content={ogImageWidth} />
-          <meta property="og:image:height" content={ogImageHeight} />
+          <meta property="og:site_name" content={ogSiteName} ></meta>
+          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} ></meta>
+          <meta property="og:title" content={ogTitle} ></meta>
+          <meta property="og:description" content={ogDescription} ></meta>
+          <meta property="og:type" content={ogType} ></meta>
+          <meta property="og:image" content={`${urlPrefix}${ogImage}`} ></meta>
+          <meta property="og:image:width" content={ogImageWidth} ></meta>
+          <meta property="og:image:height" content={ogImageHeight} ></meta>
         </Helmet>
         <video className="video-bg" preload="meta" autoPlay={true}>
           {mp4Url && (
@@ -38,6 +39,7 @@ class VideoAd extends React.Component {
         </video>
       </div>
     );
+    /*eslint-enable react/self-closing-comp*/
   }
 }
 

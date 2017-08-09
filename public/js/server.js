@@ -25311,7 +25311,7 @@ var GifAd = function (_React$Component) {
         backgroundPositionX: backgroundPositionX,
         backgroundPositionY: backgroundPositionY
       };
-
+      /*eslint-disable react/self-closing-comp*/
       return _react2.default.createElement(
         'div',
         { className: 'media-ad-container' },
@@ -25343,6 +25343,7 @@ var GifAd = function (_React$Component) {
         ),
         _react2.default.createElement('div', { className: 'gif-container', style: gifStyling })
       );
+      /*eslint-enable react/self-closing-comp*/
     }
   }]);
 

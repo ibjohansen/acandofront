@@ -14,19 +14,19 @@ class GifAd extends React.Component {
       backgroundPositionX,
       backgroundPositionY
     };
-
+    /*eslint-disable react/self-closing-comp*/
     return (
       <div className="media-ad-container">
         <Helmet>
           <title>{headTitle}</title>
-          <meta property="og:site_name" content={ogSiteName} />
-          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} />
-          <meta property="og:title" content={ogTitle} />
-          <meta property="og:description" content={ogDescription} />
-          <meta property="og:type" content={ogType} />
-          <meta property="og:image" content={`${urlPrefix}${ogImage}`} />
-          <meta property="og:image:width" content={ogImageWidth} />
-          <meta property="og:image:height" content={ogImageHeight} />
+          <meta property="og:site_name" content={ogSiteName} ></meta>
+          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} ></meta>
+          <meta property="og:title" content={ogTitle} ></meta>
+          <meta property="og:description" content={ogDescription} ></meta>
+          <meta property="og:type" content={ogType} ></meta>
+          <meta property="og:image" content={`${urlPrefix}${ogImage}`} ></meta>
+          <meta property="og:image:width" content={ogImageWidth} ></meta>
+          <meta property="og:image:height" content={ogImageHeight} ></meta>
         </Helmet>
         <div className="gif-slogan">
           <h1>{imageSlogan}</h1>
@@ -34,6 +34,7 @@ class GifAd extends React.Component {
         <div className="gif-container" style={gifStyling} />
       </div>
     );
+    /*eslint-enable react/self-closing-comp*/
   }
 }
 
