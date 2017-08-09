@@ -14,10 +14,12 @@ class VideoAd extends React.Component {
         <Helmet>
           <title>{headTitle}</title>
           <meta property="og:site_name" content={ogSiteName} ></meta>
+          <meta property="og:type" content="video" ></meta>
           <meta property="og:url" content={`${urlPrefix}${ogUrl}`} ></meta>
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
           <meta property="og:video" content={`${urlPrefix}${mp4Url}`} ></meta>
+          <meta property="og:video:secure_url" content={`${urlPrefix}${mp4Url}`} ></meta>
           <meta property="og:video:type" content={ogVideoType} ></meta>
           <meta property="og:video:width" content={ogVideoWidth} ></meta>
           <meta property="og:video:height" content={ogVideoHeight} ></meta>
