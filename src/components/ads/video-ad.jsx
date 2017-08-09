@@ -7,7 +7,7 @@ const cacheBusting = `?bust=${new Date().getTime()}`;
 
 class VideoAd extends React.Component {
   render() {
-    const { mp4Url, webmUrl, videoSlogan, headTitle, ogSiteName, location, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
+    const { mp4Url, webmUrl, imageUrl, videoSlogan, headTitle, ogSiteName, location, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
 
     /*eslint-disable react/self-closing-comp*/
     return (
@@ -24,6 +24,7 @@ class VideoAd extends React.Component {
           <meta property="og:video:type" content={ogVideoType} ></meta>
           <meta property="og:video:width" content={ogVideoWidth} ></meta>
           <meta property="og:video:height" content={ogVideoHeight} ></meta>
+          <meta property="og:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} ></meta>
         </Helmet>
         <div className="video-slogan">
           <h1>{videoSlogan}</h1>
@@ -53,6 +54,7 @@ VideoAd.propTypes = {
   location: PropTypes.any,
   mp4Url: PropTypes.string,
   webmUrl: PropTypes.string,
+  imageUrl: PropTypes.string,
   videoSlogan: PropTypes.string,
   headTitle: PropTypes.string,
   ogSiteName: PropTypes.string,

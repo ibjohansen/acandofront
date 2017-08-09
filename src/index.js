@@ -6,6 +6,7 @@ import './css/main.scss';
 import sampleVideo from 'videos/video1.mp4';
 import gif1 from 'images/ocean.gif';
 import gif2 from 'images/ocean2.gif';
+import poster1 from 'images/poster1.jpg';
 
 const Gif1 = withRouter((props) => (<GifAd
   {...props}
@@ -42,6 +43,7 @@ const Gif2 = withRouter((props) => (<GifAd
 const Video1 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={sampleVideo}
+  imageUrl={poster1}
   videoSlogan="Dette er tekst som vekker følelser"
   ogSiteName="first video test"
   ogUrl={sampleVideo}
