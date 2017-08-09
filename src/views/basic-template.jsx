@@ -8,7 +8,7 @@ export default ({ markup, helmet }) => {
     </head>
     <body ${helmet.bodyAttributes.toString()}>
       <div id="root">${markup}</div>
-      <script src="/static/bundle.js" async></script>
+      <script src="/js/bundle.js" async></script>
     </body>
     </html>`;
 };

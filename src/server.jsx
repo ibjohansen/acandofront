@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import template from 'views/basic-template';
 import App from './index';
 
-export default function serverRenderer({ clientStats, serverStats }) {
+export default function serverRenderer() {
   return (req, res) => {
     const context = {};
     const markup = ReactDOMServer.renderToString(

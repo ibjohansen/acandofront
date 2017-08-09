@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class GifAd extends React.Component {
   render() {
-    const { imageUrl, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
+    const { imageUrl, imageSlogan, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
 
     const gifStyling = {
       backgroundImage: `url("${imageUrl}")`,
@@ -25,6 +25,9 @@ class GifAd extends React.Component {
           <meta property="og:image:width" content={ogImageWidth} />
           <meta property="og:image:height" content={ogImageHeight} />
         </Helmet>
+        <div className="gif-slogan">
+          <h1>{imageSlogan}</h1>
+        </div>
         <div className="gif-container" style={gifStyling} />
       </div>
     );
@@ -33,6 +36,7 @@ class GifAd extends React.Component {
 
 GifAd.propTypes = {
   imageUrl: PropTypes.string.isRequired,
+  imageSlogan: PropTypes.string.isRequired,
   backgroundPositionX: PropTypes.string,
   backgroundPositionY: PropTypes.string,
   headTitle: PropTypes.string,
@@ -47,6 +51,7 @@ GifAd.propTypes = {
 };
 
 GifAd.defaultProps = {
+  imageSlogan: 'Put some text here',
   backgroundPositionX: '50%',
   backgroundPositionY: '50%'
 };

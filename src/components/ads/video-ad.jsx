@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class VideoAd extends React.Component {
   render() {
-    const { headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
+    const { mp4Url, webmUrl, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
 
     return (
       <div className="media-ad-container">
@@ -20,14 +20,18 @@ class VideoAd extends React.Component {
           <meta property="og:image:height" content={ogImageHeight} />
         </Helmet>
         <video className="video-bg" preload="meta" autoPlay={true}>
-          {/*<source
-            src="SampleVideo_1280x720_1mb.mp4"
-            type="video/mp4"
-          />*/}
-          <source
-            src="video.webm"
-            type="video/webm"
-          />
+          {mp4Url && (
+            <source
+              src={mp4Url}
+              type="video/mp4"
+            />
+          )}
+          {webmUrl && (
+            <source
+              src={webmUrl}
+              type="video/webm"
+            />
+          )}
           <span>Your browser does not support HTML5 video tag.</span>
         </video>
       </div>
@@ -36,6 +40,8 @@ class VideoAd extends React.Component {
 }
 
 VideoAd.propTypes = {
+  mp4Url: PropTypes.string,
+  webmUrl: PropTypes.string,
   headTitle: PropTypes.string,
   ogSiteName: PropTypes.string,
   ogUrl: PropTypes.string,

@@ -1,5 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StatsPlugin = require('stats-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
 
 const config = [
   {
@@ -7,9 +11,9 @@ const config = [
       app: ['./src/index.js']
     },
     output: {
-      path: path.resolve(__dirname, 'static'),
-      filename: 'bundle.js',
-      publicPath: '/static/'
+      path: path.resolve(__dirname, 'public'),
+      filename: 'js/bundle.js',
+      publicPath: '/'
     },
     plugins: [
       new webpack.DefinePlugin({
@@ -32,30 +36,52 @@ const config = [
           use: ['style-loader', 'css-loader', 'sass-loader']
         },
         {
-          test: /\.(png|jpg)$/,
+          test: /\.(png|jpg|mp4|webm|gif)$/,
           use: {
             loader: 'url-loader',
             options: {
-              limit: 8192
+              limit: 8192,
+              name: 'images/[hash].[ext]'
             }
           }
         }
       ]
     },
     resolve: {
-      extensions: ['.js', '.json', '.jsx']
+      extensions: ['.js', '.json', '.jsx'],
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        videos: path.resolve(__dirname, 'src/videos'),
+        images: path.resolve(__dirname, 'src/images'),
+        views: path.resolve(__dirname, 'src/views')
+      }
     }
   },
   {
     name: 'server',
-    entry: './server.jsx',
+    entry: './src/server.jsx',
     output: {
-      path: path.join(__dirname, 'static'),
-      filename: 'server.js',
+      path: path.join(__dirname, 'public'),
+      filename: 'js/server.js',
       libraryTarget: 'commonjs2',
-      publicPath: '/static/'
+      publicPath: '/'
     },
     devtool: 'source-map',
+    plugins: [
+      new ExtractTextPlugin({
+        filename: 'styles.css',
+        allChunks: true
+      }),
+      new OptimizeCssAssetsPlugin({
+        cssProcessorOptions: { discardComments: { removeAll: true } }
+      }),
+      new StatsPlugin('stats.json', {
+        chunkModules: true,
+        modules: true,
+        chunks: true,
+        exclude: [/node_modules[\\\/]react/],
+      }),
+    ],
     module: {
       rules: [
         {
@@ -65,21 +91,42 @@ const config = [
         },
         {
           test: /\.scss$/,
-          use: ['isomorphic-style-loader', 'css-loader', 'sass-loader']
+          use: ExtractTextPlugin.extract({
+            fallback: 'isomorphic-style-loader',
+            use: [{
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                importLoaders: 1,
+                localIdentName: '[hash:base64:10]',
+                sourceMap: true
+              }
+            },
+            {
+              loader: 'sass-loader'
+            }]
+          })
         },
         {
-          test: /\.(png|jpg)$/,
+          test: /\.(png|jpg|mp4|webm|gif)$/,
           use: {
             loader: 'url-loader',
             options: {
-              limit: 8192
+              limit: 8192,
+              name: 'images/[hash].[ext]'
             }
           }
         }
       ]
     },
     resolve: {
-      extensions: ['.js', '.json', '.jsx']
+      extensions: ['.js', '.json', '.jsx'],
+      alias: {
+        components: path.resolve(__dirname, 'src/components'),
+        videos: path.resolve(__dirname, 'src/videos'),
+        images: path.resolve(__dirname, 'src/images'),
+        views: path.resolve(__dirname, 'src/views')
+      }
     }
   }
 ];

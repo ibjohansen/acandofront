@@ -281,8 +281,16 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+  z-index: 5;
  //background-image: url("../images/ocean.gif");
 }
+.gif-slogan {
+  position: fixed;
+  z-index: 10;
+  color: $color-white;
+  font-size: 32px;
+}
+
 video { 
     position: fixed;
     top: 50%;
