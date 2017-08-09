@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.herokuapp.com' : '';
+const cacheBusting = `?bust=${new Date().getTime()}`;
 
 class GifAd extends React.Component {
   render() {
@@ -20,11 +21,11 @@ class GifAd extends React.Component {
         <Helmet>
           <title>{headTitle}</title>
           <meta property="og:site_name" content={ogSiteName} ></meta>
-          <meta property="og:url" content={`${urlPrefix}${location.pathname}`} ></meta>
+          <meta property="og:url" content={`${urlPrefix}${location.pathname}${cacheBusting}`} ></meta>
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
           <meta property="og:type" content={ogType} ></meta>
-          <meta property="og:image" content={`${urlPrefix}${ogImage}`} ></meta>
+          <meta property="og:image" content={`${urlPrefix}${ogImage}${cacheBusting}`} ></meta>
           <meta property="og:image:width" content={ogImageWidth} ></meta>
           <meta property="og:image:height" content={ogImageHeight} ></meta>
         </Helmet>

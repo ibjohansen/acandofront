@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
 const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.herokuapp.com' : '';
+const cacheBusting = `?bust=${new Date().getTime()}`;
 
 class VideoAd extends React.Component {
   render() {
@@ -15,11 +16,11 @@ class VideoAd extends React.Component {
           <title>{headTitle}</title>
           <meta property="og:site_name" content={ogSiteName} ></meta>
           <meta property="og:type" content="video" ></meta>
-          <meta property="og:url" content={`${urlPrefix}${location.pathname}`} ></meta>
+          <meta property="og:url" content={`${urlPrefix}${location.pathname}${cacheBusting}`} ></meta>
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
-          <meta property="og:video" content={`${urlPrefix}${mp4Url}`} ></meta>
-          <meta property="og:video:secure_url" content={`${urlPrefix}${mp4Url}`} ></meta>
+          <meta property="og:video" content={`${urlPrefix}${mp4Url}${cacheBusting}`} ></meta>
+          <meta property="og:video:secure_url" content={`${urlPrefix}${mp4Url}${cacheBusting}`} ></meta>
           <meta property="og:video:type" content={ogVideoType} ></meta>
           <meta property="og:video:width" content={ogVideoWidth} ></meta>
           <meta property="og:video:height" content={ogVideoHeight} ></meta>
@@ -27,7 +28,7 @@ class VideoAd extends React.Component {
         <div className="video-slogan">
           <h1>{videoSlogan}</h1>
         </div>
-        <video className="video-bg" preload="meta" autoPlay={true}>
+        <video className="video-bg" preload="meta" autoPlay={true} muted={true}>
           {mp4Url && (
             <source
               src={mp4Url}
