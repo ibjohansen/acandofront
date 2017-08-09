@@ -11,6 +11,8 @@ import poster1 from 'images/poster1.jpg';
 const Gif1 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif1}
+  imageSlogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  imageSloganStyling={{bottom: '10%', left: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="50%"
   backgroundPositionY="50%"
@@ -27,6 +29,8 @@ const Gif1 = withRouter((props) => (<GifAd
 const Gif2 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif2}
+  imageSlogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  imageSloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="10%"
   backgroundPositionY="20%"

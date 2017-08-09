@@ -8,7 +8,7 @@ const cacheBusting = `?bust=${new Date().getTime()}`;
 
 class GifAd extends React.Component {
   render() {
-    const { imageUrl, imageSlogan, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, location, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
+    const { imageUrl, imageSlogan, imageSloganStyling, backgroundPositionX, backgroundPositionY, headTitle, ogSiteName, location, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
 
     const gifStyling = {
       backgroundImage: `url("${imageUrl}")`,
@@ -29,8 +29,8 @@ class GifAd extends React.Component {
           <meta property="og:image:width" content={ogImageWidth} ></meta>
           <meta property="og:image:height" content={ogImageHeight} ></meta>
         </Helmet>
-        <div className="gif-slogan">
-          <h1>{imageSlogan}</h1>
+        <div className="gif-slogan" style={imageSloganStyling}>
+          {imageSlogan}
         </div>
         <div className="gif-container" style={gifStyling} />
       </div>
@@ -41,7 +41,8 @@ class GifAd extends React.Component {
 
 GifAd.propTypes = {
   imageUrl: PropTypes.string.isRequired,
-  imageSlogan: PropTypes.string.isRequired,
+  imageSlogan: PropTypes.object.isRequired,
+  imageSloganStyling: PropTypes.object,
   backgroundPositionX: PropTypes.string,
   backgroundPositionY: PropTypes.string,
   headTitle: PropTypes.string,
