@@ -14,17 +14,17 @@ class GifAd extends React.Component {
       backgroundPositionX,
       backgroundPositionY
     };
-    const modifiedOgImage = `${urlPrefix}${ogImage}`;
+
     return (
       <div className="media-ad-container">
         <Helmet>
           <title>{headTitle}</title>
           <meta property="og:site_name" content={ogSiteName} />
-          <meta property="og:url" content={ogUrl} />
+          <meta property="og:url" content={`${urlPrefix}${ogUrl}`} />
           <meta property="og:title" content={ogTitle} />
           <meta property="og:description" content={ogDescription} />
           <meta property="og:type" content={ogType} />
-          <meta property="og:image" content={modifiedOgImage} />
+          <meta property="og:image" content={`${urlPrefix}${ogImage}`} />
           <meta property="og:image:width" content={ogImageWidth} />
           <meta property="og:image:height" content={ogImageHeight} />
         </Helmet>

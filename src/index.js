@@ -15,7 +15,7 @@ const Gif1 = () => (<GifAd
   ogSiteName="first gif test"
   ogUrl={gif1}
   ogImage={gif1}
-  ogType={gif1}
+  ogType="video.webm"
   ogTitle="OceanGif yay"
   ogDescription="This is a gif of an ocean"
   ogImageWidth="497"
@@ -42,9 +42,9 @@ const Video1 = () => (<VideoAd
   backgroundPositionX="50%"
   backgroundPositionY="50%"
   ogSiteName="first video test"
-  ogUrl={gif1}
-  ogImage={gif1}
-  ogType=""
+  ogUrl={sampleVideo}
+  ogImage={sampleVideo}
+  ogType="video/webm"
   ogTitle="Video ad with ocean image yay"
   ogDescription="This is a gif of an ocean"
   ogImageWidth="497"

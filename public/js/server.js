@@ -25049,7 +25049,7 @@ var Gif1 = function Gif1() {
     ogSiteName: 'first gif test',
     ogUrl: _ocean2.default,
     ogImage: _ocean2.default,
-    ogType: _ocean2.default,
+    ogType: 'video.webm',
     ogTitle: 'OceanGif yay',
     ogDescription: 'This is a gif of an ocean',
     ogImageWidth: '497',
@@ -25080,9 +25080,9 @@ var Video1 = function Video1() {
     backgroundPositionX: '50%',
     backgroundPositionY: '50%',
     ogSiteName: 'first video test',
-    ogUrl: _ocean2.default,
-    ogImage: _ocean2.default,
-    ogType: '',
+    ogUrl: _video2.default,
+    ogImage: _video2.default,
+    ogType: 'video/webm',
     ogTitle: 'Video ad with ocean image yay',
     ogDescription: 'This is a gif of an ocean',
     ogImageWidth: '497',
@@ -25183,7 +25183,6 @@ var VideoAd = function (_React$Component) {
           ogImageHeight = _props.ogImageHeight;
 
 
-      var modifiedOgImage = '' + urlPrefix + ogImage;
       return _react2.default.createElement(
         'div',
         { className: 'media-ad-container' },
@@ -25196,11 +25195,11 @@ var VideoAd = function (_React$Component) {
             headTitle
           ),
           _react2.default.createElement('meta', { property: 'og:site_name', content: ogSiteName }),
-          _react2.default.createElement('meta', { property: 'og:url', content: ogUrl }),
+          _react2.default.createElement('meta', { property: 'og:url', content: '' + urlPrefix + ogUrl }),
           _react2.default.createElement('meta', { property: 'og:title', content: ogTitle }),
           _react2.default.createElement('meta', { property: 'og:description', content: ogDescription }),
           _react2.default.createElement('meta', { property: 'og:type', content: ogType }),
-          _react2.default.createElement('meta', { property: 'og:image', content: modifiedOgImage }),
+          _react2.default.createElement('meta', { property: 'og:image', content: '' + urlPrefix + ogImage }),
           _react2.default.createElement('meta', { property: 'og:image:width', content: ogImageWidth }),
           _react2.default.createElement('meta', { property: 'og:image:height', content: ogImageHeight })
         ),
@@ -25278,9 +25277,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var urlPrefix =  true ? 'https://magic-dreams.herokuapp.com/' : '';
-/* eslint-disable no-console */
-console.log('image: ', "production");
-/* eslint-enable no-console */
 
 var GifAd = function (_React$Component) {
   _inherits(GifAd, _React$Component);
@@ -25315,7 +25311,7 @@ var GifAd = function (_React$Component) {
         backgroundPositionX: backgroundPositionX,
         backgroundPositionY: backgroundPositionY
       };
-      var modifiedOgImage = '' + urlPrefix + ogImage;
+
       return _react2.default.createElement(
         'div',
         { className: 'media-ad-container' },
@@ -25328,11 +25324,11 @@ var GifAd = function (_React$Component) {
             headTitle
           ),
           _react2.default.createElement('meta', { property: 'og:site_name', content: ogSiteName }),
-          _react2.default.createElement('meta', { property: 'og:url', content: ogUrl }),
+          _react2.default.createElement('meta', { property: 'og:url', content: '' + urlPrefix + ogUrl }),
           _react2.default.createElement('meta', { property: 'og:title', content: ogTitle }),
           _react2.default.createElement('meta', { property: 'og:description', content: ogDescription }),
           _react2.default.createElement('meta', { property: 'og:type', content: ogType }),
-          _react2.default.createElement('meta', { property: 'og:image', content: modifiedOgImage }),
+          _react2.default.createElement('meta', { property: 'og:image', content: '' + urlPrefix + ogImage }),
           _react2.default.createElement('meta', { property: 'og:image:width', content: ogImageWidth }),
           _react2.default.createElement('meta', { property: 'og:image:height', content: ogImageHeight })
         ),
