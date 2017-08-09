@@ -6,7 +6,7 @@ const urlPrefix = process.env.NODE_ENV === 'production' ? 'https://magic-dreams.
 
 class VideoAd extends React.Component {
   render() {
-    const { mp4Url, webmUrl, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogType, ogImage, ogImageWidth, ogImageHeight } = this.props;
+    const { mp4Url, webmUrl, headTitle, ogSiteName, ogUrl, ogTitle, ogDescription, ogVideoType, ogVideoWidth, ogVideoHeight } = this.props;
 
     /*eslint-disable react/self-closing-comp*/
     return (
@@ -17,10 +17,10 @@ class VideoAd extends React.Component {
           <meta property="og:url" content={`${urlPrefix}${ogUrl}`} ></meta>
           <meta property="og:title" content={ogTitle} ></meta>
           <meta property="og:description" content={ogDescription} ></meta>
-          <meta property="og:type" content={ogType} ></meta>
-          <meta property="og:image" content={`${urlPrefix}${ogImage}`} ></meta>
-          <meta property="og:image:width" content={ogImageWidth} ></meta>
-          <meta property="og:image:height" content={ogImageHeight} ></meta>
+          <meta property="og:video" content={`${urlPrefix}${mp4Url}`} ></meta>
+          <meta property="og:video:type" content={ogVideoType} ></meta>
+          <meta property="og:image:width" content={ogVideoWidth} ></meta>
+          <meta property="og:image:height" content={ogVideoHeight} ></meta>
         </Helmet>
         <video className="video-bg" preload="meta" autoPlay={true}>
           {mp4Url && (
@@ -51,10 +51,9 @@ VideoAd.propTypes = {
   ogUrl: PropTypes.string,
   ogTitle: PropTypes.string,
   ogDescription: PropTypes.string,
-  ogType: PropTypes.string,
-  ogImage: PropTypes.string,
-  ogImageWidth: PropTypes.string,
-  ogImageHeight: PropTypes.string
+  ogVideoType: PropTypes.string,
+  ogVideoWidth: PropTypes.string,
+  ogVideoHeight: PropTypes.string
 };
 
 export default VideoAd;

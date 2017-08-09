@@ -43,12 +43,11 @@ const Video1 = () => (<VideoAd
   backgroundPositionY="50%"
   ogSiteName="first video test"
   ogUrl={sampleVideo}
-  ogImage={sampleVideo}
-  ogType="video/webm"
-  ogTitle="Video ad with ocean image yay"
-  ogDescription="This is a gif of an ocean"
-  ogImageWidth="497"
-  ogImageHeight="373"
+  ogVideoType="video/mp4"
+  ogTitle="This is a video, yay"
+  ogDescription="This is a longer description of the video."
+  ogVideoWidth="1280"
+  ogVideoHeight="720"
 />);
 
 
