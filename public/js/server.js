@@ -25081,12 +25081,11 @@ var Video1 = function Video1() {
     backgroundPositionY: '50%',
     ogSiteName: 'first video test',
     ogUrl: _video2.default,
-    ogImage: _video2.default,
-    ogType: 'video/webm',
-    ogTitle: 'Video ad with ocean image yay',
-    ogDescription: 'This is a gif of an ocean',
-    ogImageWidth: '497',
-    ogImageHeight: '373'
+    ogVideoType: 'video/mp4',
+    ogTitle: 'This is a video, yay',
+    ogDescription: 'This is a longer description of the video.',
+    ogVideoWidth: '1280',
+    ogVideoHeight: '720'
   });
 };
 
@@ -25177,11 +25176,11 @@ var VideoAd = function (_React$Component) {
           ogUrl = _props.ogUrl,
           ogTitle = _props.ogTitle,
           ogDescription = _props.ogDescription,
-          ogType = _props.ogType,
-          ogImage = _props.ogImage,
-          ogImageWidth = _props.ogImageWidth,
-          ogImageHeight = _props.ogImageHeight;
+          ogVideoType = _props.ogVideoType,
+          ogVideoWidth = _props.ogVideoWidth,
+          ogVideoHeight = _props.ogVideoHeight;
 
+      /*eslint-disable react/self-closing-comp*/
 
       return _react2.default.createElement(
         'div',
@@ -25198,10 +25197,10 @@ var VideoAd = function (_React$Component) {
           _react2.default.createElement('meta', { property: 'og:url', content: '' + urlPrefix + ogUrl }),
           _react2.default.createElement('meta', { property: 'og:title', content: ogTitle }),
           _react2.default.createElement('meta', { property: 'og:description', content: ogDescription }),
-          _react2.default.createElement('meta', { property: 'og:type', content: ogType }),
-          _react2.default.createElement('meta', { property: 'og:image', content: '' + urlPrefix + ogImage }),
-          _react2.default.createElement('meta', { property: 'og:image:width', content: ogImageWidth }),
-          _react2.default.createElement('meta', { property: 'og:image:height', content: ogImageHeight })
+          _react2.default.createElement('meta', { property: 'og:video', content: '' + urlPrefix + mp4Url }),
+          _react2.default.createElement('meta', { property: 'og:video:type', content: ogVideoType }),
+          _react2.default.createElement('meta', { property: 'og:video:width', content: ogVideoWidth }),
+          _react2.default.createElement('meta', { property: 'og:video:height', content: ogVideoHeight })
         ),
         _react2.default.createElement(
           'video',
@@ -25221,6 +25220,7 @@ var VideoAd = function (_React$Component) {
           )
         )
       );
+      /*eslint-enable react/self-closing-comp*/
     }
   }]);
 
@@ -25235,10 +25235,9 @@ VideoAd.propTypes = {
   ogUrl: _propTypes2.default.string,
   ogTitle: _propTypes2.default.string,
   ogDescription: _propTypes2.default.string,
-  ogType: _propTypes2.default.string,
-  ogImage: _propTypes2.default.string,
-  ogImageWidth: _propTypes2.default.string,
-  ogImageHeight: _propTypes2.default.string
+  ogVideoType: _propTypes2.default.string,
+  ogVideoWidth: _propTypes2.default.string,
+  ogVideoHeight: _propTypes2.default.string
 };
 
 exports.default = VideoAd;

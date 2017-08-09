@@ -19,8 +19,8 @@ class VideoAd extends React.Component {
           <meta property="og:description" content={ogDescription} ></meta>
           <meta property="og:video" content={`${urlPrefix}${mp4Url}`} ></meta>
           <meta property="og:video:type" content={ogVideoType} ></meta>
-          <meta property="og:image:width" content={ogVideoWidth} ></meta>
-          <meta property="og:image:height" content={ogVideoHeight} ></meta>
+          <meta property="og:video:width" content={ogVideoWidth} ></meta>
+          <meta property="og:video:height" content={ogVideoHeight} ></meta>
         </Helmet>
         <video className="video-bg" preload="meta" autoPlay={true}>
           {mp4Url && (
