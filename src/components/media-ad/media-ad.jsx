@@ -19,6 +19,7 @@ const MediaAd = (Ad) => {
     <div className="media-ad-container">
       <Helmet>
         <title>{headTitle}</title>
+        {/* Open graph */}
         <meta property="og:site_name" content={ogSiteName} ></meta>
         <meta property="og:type" content="video" ></meta>
         <meta property="og:url" content={`${urlPrefix}${location.pathname}${cacheBusting}`} ></meta>
@@ -52,6 +53,24 @@ const MediaAd = (Ad) => {
         {ogImageHeight && (
           <meta property="og:image:height" content={ogImageHeight} ></meta>
         )}
+        
+        {/* Twitter */}
+        {mp4Url && (
+          <meta name="twitter:card" content="player" />
+        )}
+        {(!mp4Url && imageUrl) && (
+          <meta name="twitter:card" content="summary_large_image" />
+        )}
+        
+        <meta name="twitter:site" content="@AcandoNorge" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+        <meta name="twitter:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} />
+        <meta name="twitter:player" content={`${urlPrefix}${location.pathname}${cacheBusting}`} />
+        <meta name="twitter:player:width" content={ogVideoWidth} />
+        <meta name="twitter:player:height" content={ogVideoHeight} />
+        <meta name="twitter:player:stream" content={`${urlPrefix}${mp4Url}${cacheBusting}`} />
+        <meta name="twitter:player:stream:content_type" content={ogVideoType} />
         
       </Helmet>
       <div className="slogan" style={sloganStyling}>
