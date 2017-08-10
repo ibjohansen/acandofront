@@ -4,6 +4,8 @@ import {StaticRouter} from 'react-router-dom';
 import Helmet from 'react-helmet';
 import template from 'views/basic-template';
 import App from './index';
+import './css/main.scss';
+import './components/media-ad/_media-ad.scss';
 
 export default function serverRenderer() {
   return (req, res) => {

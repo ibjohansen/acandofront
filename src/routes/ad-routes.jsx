@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
-import VideoAd from 'components/ads/video-ad';
-import GifAd from 'components/ads/gif-ad';
+import VideoAd from 'components/video-ad/video-ad';
+import GifAd from 'components/gif-ad/gif-ad';
 import sampleVideo from 'videos/video1.mp4';
 import gif1 from 'images/ocean.gif';
 import gif2 from 'images/ocean2.gif';
@@ -10,8 +10,8 @@ import poster1 from 'images/poster1.jpg';
 const Gif1 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif1}
-  imageSlogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
-  imageSloganStyling={{bottom: '10%', left: '2%', maxWidth: '300px'}}
+  slogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  sloganStyling={{bottom: '10%', left: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="50%"
   backgroundPositionY="50%"
@@ -28,8 +28,8 @@ const Gif1 = withRouter((props) => (<GifAd
 const Gif2 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif2}
-  imageSlogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
-  imageSloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
+  slogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  sloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="10%"
   backgroundPositionY="20%"
@@ -48,8 +48,8 @@ const Video1 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={sampleVideo}
   imageUrl={poster1}
-  videoSlogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
-  videoSloganStyling={{top: '50%', left: '2%', maxWidth: '300px'}}
+  slogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
+  sloganStyling={{top: '50%', left: '2%', maxWidth: '300px'}}
   ogSiteName="first video test"
   ogUrl={sampleVideo}
   ogVideoType="video/mp4"

@@ -13,7 +13,7 @@ app.set('port', (process.env.PORT || 3000));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(webpackDevMiddleware(compiler, {
-  publicPath: '/static/',
+  publicPath: config[0].output.publicPath,
   serverSideRender: true
 }));
 app.use(webpackHotMiddleware(compiler.compilers.find((compiler) => compiler.name === 'client')));
