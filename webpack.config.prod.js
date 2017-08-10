@@ -51,6 +51,7 @@ const config = [
       extensions: ['.js', '.json', '.jsx'],
       alias: {
         components: path.resolve(__dirname, 'src/components'),
+        routes: path.resolve(__dirname, 'src/routes'),
         videos: path.resolve(__dirname, 'src/videos'),
         images: path.resolve(__dirname, 'src/images'),
         views: path.resolve(__dirname, 'src/views')
@@ -128,6 +129,7 @@ const config = [
       extensions: ['.js', '.json', '.jsx'],
       alias: {
         components: path.resolve(__dirname, 'src/components'),
+        routes: path.resolve(__dirname, 'src/routes'),
         videos: path.resolve(__dirname, 'src/videos'),
         images: path.resolve(__dirname, 'src/images'),
         views: path.resolve(__dirname, 'src/views')
