@@ -2,7 +2,8 @@ import React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import VideoAd from 'components/video-ad/video-ad';
 import GifAd from 'components/gif-ad/gif-ad';
-import sampleVideo from 'videos/video1.mp4';
+import sampleVideo from 'videos/tunnel.mp4';
+import sampleVideo2 from 'videos/auroraborealis.mp4';
 import gif1 from 'images/ocean.gif';
 import gif2 from 'images/ocean2.gif';
 import poster1 from 'images/poster1.jpg';
@@ -59,12 +60,30 @@ const Video1 = withRouter((props) => (<VideoAd
   ogVideoHeight="720"
 />));
 
+// VideoSlogan can contain a Link to proper landing page.
+const Video2 = withRouter((props) => (<VideoAd
+  {...props}
+  mp4Url={sampleVideo2}
+  imageUrl={poster1}
+  slogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
+  sloganStyling={{bottom: '10%', left: '2%', maxWidth: '320px'}}
+  ogSiteName="first video test"
+  ogUrl={sampleVideo2}
+  ogVideoType="video/mp4"
+  ogTitle="This is a video, yay"
+  ogDescription="This is a longer description of the video."
+  ogVideoWidth="1280"
+  ogVideoHeight="720"
+/>));
+
+
 const routes = (
   <div>
     <Route exact path="/" component={Video1} />
     <Route exact path="/gif1" component={Gif1} />
     <Route exact path="/gif2" component={Gif2} />
     <Route exact path="/video1" component={Video1} />
+    <Route exact path="/video2" component={Video2} />
   </div>
 );
 

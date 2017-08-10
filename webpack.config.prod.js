@@ -33,7 +33,7 @@ const config = [
         },
         {
           test: /\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
+          use: ['style-loader', 'css-loader', 'postcss-loader']
         },
         {
           test: /\.(png|jpg|mp4|webm|gif)$/,
@@ -109,7 +109,7 @@ const config = [
               }
             },
             {
-              loader: 'sass-loader'
+              loader: 'postcss-loader'
             }]
           })
         },

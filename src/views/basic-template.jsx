@@ -5,6 +5,7 @@ export default ({ markup, helmet }) => {
       ${helmet.title.toString()}
       ${helmet.meta.toString()}
       ${helmet.link.toString()}
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="/styles.css">
     </head>
     <body ${helmet.bodyAttributes.toString()}>

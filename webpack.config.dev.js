@@ -20,7 +20,11 @@ const config = [
         },
         {
           test: /\.scss$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
+          use: [
+            'style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+          ]
         },
         {
           test: /\.(png|jpg|mp4|webm|gif)$/,
@@ -64,7 +68,11 @@ const config = [
         },
         {
           test: /\.scss$/,
-          use: ['isomorphic-style-loader', 'css-loader', 'sass-loader']
+          use: [
+            'isomorphic-style-loader',
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+          ]
         },
         {
           test: /\.(png|jpg|mp4|webm|gif)$/,
