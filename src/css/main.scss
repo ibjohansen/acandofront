@@ -35,7 +35,12 @@ h1 {
   font-weight: 400;
   line-height: 1.2em;
   color: white;
-
+  // Because of all the extra divs that I'm forced to use because of React -_-.
+  div,
+  div div {
+    width: inherit;
+    height: inherit;
+  }
 }
 
 

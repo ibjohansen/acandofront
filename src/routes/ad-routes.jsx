@@ -72,7 +72,7 @@ const Video2 = withRouter((props) => (<VideoAd
       <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
     </div>
   </Link>}
-  sloganStyling={{bottom: '10%', left: '2%'}}
+  sloganStyling={{bottom: '10%'}}
   ogSiteName="first video test"
   ogUrl={sampleVideo2}
   ogVideoType="video/mp4"

@@ -9,7 +9,7 @@ export default ({ markup, helmet }) => {
       <link rel="stylesheet" href="/styles.css">
     </head>
     <body ${helmet.bodyAttributes.toString()}>
-      <div id="root">${markup}</div>
+      <div id="app">${markup}</div>
       <script src="/js/bundle.js" async></script>
     </body>
     </html>`;
