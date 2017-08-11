@@ -26,9 +26,6 @@ const MediaAd = (Ad) => {
         <meta property="og:title" content={ogTitle} ></meta>
         <meta property="og:description" content={ogDescription} ></meta>
         <meta property="og:type" content={ogType} ></meta>
-        {imageUrl && (
-          <meta property="og:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} ></meta>
-        )}
         {mp4Url && (
           <meta property="og:video" content={`${urlPrefix}${mp4Url}${cacheBusting}`} ></meta>
         )}
@@ -46,6 +43,9 @@ const MediaAd = (Ad) => {
         )}
         {ogImage && (
           <meta property="og:image" content={`${urlPrefix}${ogImage}${cacheBusting}`} ></meta>
+        )}
+        {imageUrl && (
+          <meta property="og:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} ></meta>
         )}
         {ogImageWidth && (
           <meta property="og:image:width" content={ogImageWidth} ></meta>
