@@ -6,26 +6,30 @@ import GifAd from 'components/gif-ad/gif-ad';
 import sampleVideo from 'videos/tunnel.mp4';
 import sampleVideo2 from 'videos/auroraborealis.mp4';
 import samplePoster2 from 'images/auroraborealis_poster.jpg';
-import gif1 from 'images/ocean.gif';
+import gif1 from 'images/auroraborealis_poster.gif';
 import gif2 from 'images/ocean2.gif';
 import poster1 from 'images/poster1.jpg';
 
 const Gif1 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif1}
-  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Hva drømmer du om å bli?</h1></Link>}
-  sloganStyling={{bottom: '10%', left: '2%', maxWidth: '300px'}}
+  slogan={<Link to="/landingpage">
+    <div className="slogan-text-container">
+      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+    </div>
+  </Link>}
+  sloganStyling={{bottom: '10%'}}
   // 50% is default
   backgroundPositionX="50%"
   backgroundPositionY="50%"
-  ogSiteName="first gif test"
+  ogTitle="Hva drømmer du om å bli?"
+  ogDescription="Hva drømmer du om å bli?"
+  ogSiteName="Acando"
   ogUrl={gif1}
-  ogImage={gif1}
-  ogType="video.webm"
-  ogTitle="OceanGif yay"
-  ogDescription="This is a gif of an ocean"
-  ogImageWidth="497"
-  ogImageHeight="373"
+  ogImage={samplePoster2}
+  ogImageType="image/gif"
+  ogImageWidth="1920"
+  ogImageHeight="1080"
 />));
 
 const Gif2 = withRouter((props) => (<GifAd
@@ -36,9 +40,10 @@ const Gif2 = withRouter((props) => (<GifAd
   // 50% is default
   backgroundPositionX="10%"
   backgroundPositionY="20%"
-  ogSiteName="second gif test"
+  ogSiteName="Acando"
   ogUrl={gif2}
   ogImage={gif2}
+  ogImageType="image/gif"
   ogType={gif2}
   ogTitle="this is number 2"
   ogDescription="This is a gif of an ocean"

@@ -11,7 +11,7 @@ const MediaAd = (Ad) => {
   // Properties of a video ad
   const { mp4Url, ogVideoType, ogVideoWidth, ogVideoHeight } = Ad;
   // Properties of a gif ad
-  const { ogImage, ogImageWidth, ogImageHeight } = Ad;
+  const { ogImage, ogImageType, ogImageWidth, ogImageHeight } = Ad;
   /* Need to avoid using selv-closing tags on the meta tags, because for some reason they 
      caused errors with facebook share. */
   /*eslint-disable react/self-closing-comp*/
@@ -44,8 +44,8 @@ const MediaAd = (Ad) => {
         {ogImage && (
           <meta property="og:image" content={`${urlPrefix}${ogImage}${cacheBusting}`} ></meta>
         )}
-        {imageUrl && (
-          <meta property="og:image" content={`${urlPrefix}${imageUrl}${cacheBusting}`} ></meta>
+        {ogImageType && (
+          <meta property="og:image" content={`${urlPrefix}${ogImageType}${cacheBusting}`} ></meta>
         )}
         {ogImageWidth && (
           <meta property="og:image:width" content={ogImageWidth} ></meta>

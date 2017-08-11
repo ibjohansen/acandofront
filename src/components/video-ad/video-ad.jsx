@@ -8,7 +8,7 @@ class VideoAd extends React.Component {
 
     return (
       <MediaAd {...this.props}>
-        <video className="video-bg" preload="meta" autoPlay={true} muted={true} loop={true}>
+        <video className="video-bg" preload="metadata" autoPlay={true} muted={true} loop={true} playsInline={true}>
           {mp4Url && (
             <source
               src={mp4Url}
