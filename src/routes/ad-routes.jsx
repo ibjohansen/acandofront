@@ -1,9 +1,11 @@
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
+import LandingPage1 from 'components/landing-page/landing-page-1';
 import VideoAd from 'components/video-ad/video-ad';
 import GifAd from 'components/gif-ad/gif-ad';
 import sampleVideo from 'videos/tunnel.mp4';
 import sampleVideo2 from 'videos/auroraborealis.mp4';
+import samplePoster2 from 'images/auroraborealis_poster.gif';
 import gif1 from 'images/ocean.gif';
 import gif2 from 'images/ocean2.gif';
 import poster1 from 'images/poster1.jpg';
@@ -11,7 +13,7 @@ import poster1 from 'images/poster1.jpg';
 const Gif1 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif1}
-  slogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Hva drømmer du om å bli?</h1></Link>}
   sloganStyling={{bottom: '10%', left: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="50%"
@@ -29,7 +31,7 @@ const Gif1 = withRouter((props) => (<GifAd
 const Gif2 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif2}
-  slogan={<h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>}
+  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Hva drømmer du om å bli?</h1></Link>}
   sloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="10%"
@@ -49,8 +51,8 @@ const Video1 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={sampleVideo}
   imageUrl={poster1}
-  slogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
-  sloganStyling={{top: '50%', left: '2%', maxWidth: '300px'}}
+  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1></Link>}
+  sloganStyling={{bottom: '10%', left: '2%'}}
   ogSiteName="first video test"
   ogUrl={sampleVideo}
   ogVideoType="video/mp4"
@@ -64,9 +66,13 @@ const Video1 = withRouter((props) => (<VideoAd
 const Video2 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={sampleVideo2}
-  imageUrl={poster1}
-  slogan={<h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1>}
-  sloganStyling={{bottom: '10%', left: '2%', maxWidth: '320px'}}
+  imageUrl={samplePoster2}
+  slogan={<Link to="/landingpage">
+    <div className="slogan-text-container">
+      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+    </div>
+  </Link>}
+  sloganStyling={{bottom: '10%', left: '2%'}}
   ogSiteName="first video test"
   ogUrl={sampleVideo2}
   ogVideoType="video/mp4"
@@ -84,6 +90,7 @@ const routes = (
     <Route exact path="/gif2" component={Gif2} />
     <Route exact path="/video1" component={Video1} />
     <Route exact path="/video2" component={Video2} />
+    <Route exact path="/landingpage" component={LandingPage1} />
   </div>
 );
 

@@ -4,6 +4,7 @@
   z-index: 10;
   color: $color-white;
   font-size: 18px;
+  width: 100%;
   @media (min-width: 768px) {
     font-size: 32px;
   }
@@ -20,4 +21,16 @@ video {
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   transition: 1s opacity;
+}
+
+
+/* This is a custom classname on a div sent in to slogan prop. */
+.slogan-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    max-width: 320px;
+  }
 }
