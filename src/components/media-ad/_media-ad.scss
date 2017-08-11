@@ -32,5 +32,8 @@ video {
   text-align: center;
   h1 {
     max-width: 320px;
+    @media (min-width: 768px) {
+      max-width: 500px;
+    }
   }
 }
