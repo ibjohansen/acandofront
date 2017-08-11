@@ -5,7 +5,7 @@ import VideoAd from 'components/video-ad/video-ad';
 import GifAd from 'components/gif-ad/gif-ad';
 import sampleVideo from 'videos/tunnel.mp4';
 import sampleVideo2 from 'videos/auroraborealis.mp4';
-import samplePoster2 from 'images/auroraborealis_poster.gif';
+import samplePoster2 from 'images/auroraborealis_poster.jpg';
 import gif1 from 'images/ocean.gif';
 import gif2 from 'images/ocean2.gif';
 import poster1 from 'images/poster1.jpg';
