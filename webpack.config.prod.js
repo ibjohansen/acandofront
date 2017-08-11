@@ -58,7 +58,8 @@ const config = [
         routes: path.resolve(__dirname, 'src/routes'),
         videos: path.resolve(__dirname, 'src/videos'),
         images: path.resolve(__dirname, 'src/images'),
-        views: path.resolve(__dirname, 'src/views')
+        views: path.resolve(__dirname, 'src/views'),
+        utils: path.resolve(__dirname, 'src/utils')
       }
     }
   },
@@ -136,7 +137,8 @@ const config = [
         routes: path.resolve(__dirname, 'src/routes'),
         videos: path.resolve(__dirname, 'src/videos'),
         images: path.resolve(__dirname, 'src/images'),
-        views: path.resolve(__dirname, 'src/views')
+        views: path.resolve(__dirname, 'src/views'),
+        utils: path.resolve(__dirname, 'src/utils')
       }
     }
   }

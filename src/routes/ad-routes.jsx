@@ -85,6 +85,7 @@ const Video2 = withRouter((props) => (<VideoAd
   ogDescription="This is a longer description of the video."
   ogVideoWidth="1280"
   ogVideoHeight="720"
+  videoFallback={gif1}
 />));
 
 
