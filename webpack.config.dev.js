@@ -3,7 +3,7 @@ const path = require('path');
 const config = [
   {
     name: 'client',
-    entry: './src/index.js',
+    entry: './src/client.jsx',
     output: {
       path: path.join(__dirname, 'public'),
       filename: 'js/bundle.js',

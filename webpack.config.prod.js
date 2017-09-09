@@ -8,7 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const config = [
   {
     entry: {
-      app: ['./src/index.js']
+      app: ['./src/client.jsx']
     },
     output: {
       path: path.resolve(__dirname, 'public'),

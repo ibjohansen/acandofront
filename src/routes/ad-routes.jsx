@@ -5,9 +5,11 @@ import VideoAd from 'components/video-ad/video-ad';
 import GifAd from 'components/gif-ad/gif-ad';
 import sampleVideo from 'videos/tunnel.mp4';
 import sampleVideo2 from 'videos/auroraborealis.mp4';
+import sampleVideo3 from 'videos/dreamer.mp4';
 import samplePoster2 from 'images/auroraborealis_poster.jpg';
 import gif1 from 'images/auroraborealis_poster.gif';
 import gif2 from 'images/ocean2.gif';
+import gif3 from 'images/dreamer.gif';
 import poster1 from 'images/poster1.jpg';
 
 const Gif1 = withRouter((props) => (<GifAd
@@ -51,6 +53,25 @@ const Gif2 = withRouter((props) => (<GifAd
   ogImageHeight="717"
 />));
 
+const Gif3 = withRouter((props) => (<GifAd
+  {...props}
+  imageUrl={gif3}
+  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Hva drømmer du om å bli?</h1></Link>}
+  sloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
+  // 50% is default
+  backgroundPositionX="50%"
+  backgroundPositionY="50%"
+  ogSiteName="Acando"
+  ogUrl={gif3}
+  ogImage={gif3}
+  ogImageType="image/gif"
+  ogType={gif3}
+  ogTitle="Hva drømmer du om å bli?"
+  ogDescription=""
+  ogImageWidth="1280"
+  ogImageHeight="720"
+/>));
+
 // VideoSlogan can contain a Link to proper landing page.
 const Video1 = withRouter((props) => (<VideoAd
   {...props}
@@ -88,14 +109,39 @@ const Video2 = withRouter((props) => (<VideoAd
   videoFallback={gif1}
 />));
 
+// VideoSlogan can contain a Link to proper landing page.
+const Video3 = withRouter((props) => (<VideoAd
+  {...props}
+  mp4Url={sampleVideo3}
+  imageUrl={samplePoster2}
+  slogan={<Link to="/landingpage">
+    <div className="slogan-text-container">
+      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+    </div>
+  </Link>}
+  sloganStyling={{bottom: '10%'}}
+  ogSiteName="first video test"
+  ogUrl={sampleVideo3}
+  ogVideoType="video/mp4"
+  ogTitle="Hva drømmer du om å bli?"
+  ogDescription=""
+  ogVideoWidth="1280"
+  ogVideoHeight="720"
+  videoFallback={gif3}
+  focusX={80}
+  focusY={50}
+/>));
+
 
 const routes = (
   <div>
     <Route exact path="/" component={Video1} />
     <Route exact path="/gif1" component={Gif1} />
     <Route exact path="/gif2" component={Gif2} />
+    <Route exact path="/gif3" component={Gif3} />
     <Route exact path="/video1" component={Video1} />
     <Route exact path="/video2" component={Video2} />
+    <Route exact path="/video3" component={Video3} />
     <Route exact path="/landingpage" component={LandingPage1} />
   </div>
 );
