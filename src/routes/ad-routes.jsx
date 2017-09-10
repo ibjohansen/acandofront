@@ -77,8 +77,8 @@ const Gif3 = withRouter((props) => (<GifAd
   ogType={gif3}
   ogTitle="Hva drømmer du om å bli?"
   ogDescription=""
-  ogImageWidth="1280"
-  ogImageHeight="720"
+  ogImageWidth="600"
+  ogImageHeight="338"
 />));
 
 const Gif4 = withRouter((props) => (<GifAd
@@ -100,8 +100,8 @@ const Gif4 = withRouter((props) => (<GifAd
   ogType={gif4}
   ogTitle="Har du dybden som kreves?"
   ogDescription=""
-  ogImageWidth="1280"
-  ogImageHeight="720"
+  ogImageWidth="800"
+  ogImageHeight="450"
 />));
 
 // VideoSlogan can contain a Link to proper landing page.
@@ -118,6 +118,10 @@ const Video1 = withRouter((props) => (<VideoAd
   ogDescription="This is a longer description of the video."
   ogVideoWidth="1280"
   ogVideoHeight="720"
+  ogImage={gif1}
+  ogImageType="image/gif"
+  ogImageWidth="800"
+  ogImageHeight="450"
   videoFallback={gif1}
 />));
 
@@ -139,6 +143,10 @@ const Video2 = withRouter((props) => (<VideoAd
   ogDescription="This is a longer description of the video."
   ogVideoWidth="1280"
   ogVideoHeight="720"
+  ogImage={gif2}
+  ogImageType="image/gif"
+  ogImageWidth="1280"
+  ogImageHeight="720"
   videoFallback={gif2}
 />));
 
@@ -159,6 +167,10 @@ const Video3 = withRouter((props) => (<VideoAd
   ogDescription=""
   ogVideoWidth="1280"
   ogVideoHeight="720"
+  ogImage={gif3}
+  ogImageType="image/gif"
+  ogImageWidth="600"
+  ogImageHeight="338"
   videoFallback={gif3}
   focusX={80}
   focusY={50}
@@ -183,6 +195,8 @@ const Video4 = withRouter((props) => (<VideoAd
   ogVideoHeight="720"
   ogImage={gif4}
   ogImageType="image/gif"
+  ogImageWidth="800"
+  ogImageHeight="450"
   ogType={gif4}
   videoFallback={gif4}
   focusX={55}
