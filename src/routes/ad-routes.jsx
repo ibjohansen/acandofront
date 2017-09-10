@@ -109,13 +109,17 @@ const Video1 = withRouter((props) => (<VideoAd
   {...props}
   mp4Url={video1}
   imageUrl={poster1}
-  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Dette er tekst som vekker følelser</h1></Link>}
+  slogan={<Link to="/landingpage">
+    <div className="slogan-text-container">
+      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+    </div>
+  </Link>}
   sloganStyling={{bottom: '10%', left: '2%'}}
   ogSiteName="Acando"
   ogUrl={video1}
   ogVideoType="video/mp4"
-  ogTitle="This is a video, yay"
-  ogDescription="This is a longer description of the video."
+  ogTitle="Hva drømmer du om å bli?"
+  ogDescription=""
   ogVideoWidth="1280"
   ogVideoHeight="720"
   ogImage={gif1}
@@ -139,8 +143,8 @@ const Video2 = withRouter((props) => (<VideoAd
   ogSiteName="Acando"
   ogUrl={video2}
   ogVideoType="video/mp4"
-  ogTitle="This is a video, yay"
-  ogDescription="This is a longer description of the video."
+  ogTitle="Hva drømmer du om å bli?"
+  ogDescription=""
   ogVideoWidth="1280"
   ogVideoHeight="720"
   ogImage={gif2}
