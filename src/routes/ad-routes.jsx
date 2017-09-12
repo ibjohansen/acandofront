@@ -22,15 +22,15 @@ const Gif1 = withRouter((props) => (<GifAd
   imageUrl={gif1}
   slogan={<Link to="/landingpage">
     <div className="slogan-text-container">
-      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+      <h1 className="some-custom-classname">Finn veien med oss!</h1>
     </div>
   </Link>}
   sloganStyling={{bottom: '10%'}}
   // 50% is default
   backgroundPositionX="50%"
   backgroundPositionY="50%"
-  ogTitle="Hva drømmer du om å bli?"
-  ogDescription="Hva drømmer du om å bli?"
+  ogTitle="Finn veien med oss!"
+  ogDescription=""
   ogSiteName="Acando"
   ogUrl={gif1}
   ogImage={gif1}
@@ -42,7 +42,7 @@ const Gif1 = withRouter((props) => (<GifAd
 const Gif2 = withRouter((props) => (<GifAd
   {...props}
   imageUrl={gif2}
-  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Hva drømmer du om å bli?</h1></Link>}
+  slogan={<Link to="/landingpage"><h1 className="some-custom-classname">Få en lysende fremtid med oss!</h1></Link>}
   sloganStyling={{top: '10%', right: '2%', maxWidth: '300px'}}
   // 50% is default
   backgroundPositionX="10%"
@@ -52,8 +52,8 @@ const Gif2 = withRouter((props) => (<GifAd
   ogImage={gif2}
   ogImageType="image/gif"
   ogType={gif2}
-  ogTitle="this is number 2"
-  ogDescription="This is a gif of an ocean"
+  ogTitle="Få en lysende fremtid med oss!"
+  ogDescription=""
   ogImageWidth="1280"
   ogImageHeight="720"
 />));
@@ -111,14 +111,15 @@ const Video1 = withRouter((props) => (<VideoAd
   imageUrl={poster1}
   slogan={<Link to="/landingpage">
     <div className="slogan-text-container">
-      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+      <h1 className="slogan-video-1">Finn veien med oss!</h1>
+      <h4><a href="http://www.acando.no/ledigestillinger">www.acando.no/ledigestillinger</a></h4>
     </div>
   </Link>}
   sloganStyling={{bottom: '10%', left: '2%'}}
   ogSiteName="Acando"
   ogUrl={video1}
   ogVideoType="video/mp4"
-  ogTitle="Hva drømmer du om å bli?"
+  ogTitle="Finn veien med oss!"
   ogDescription=""
   ogVideoWidth="1280"
   ogVideoHeight="720"
@@ -136,14 +137,15 @@ const Video2 = withRouter((props) => (<VideoAd
   imageUrl={poster2}
   slogan={<Link to="/landingpage">
     <div className="slogan-text-container">
-      <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+      <h1 className="slogan-video-2">Få en lysende fremtid med oss!</h1>
+      <h4><a href="http://www.acando.no/ledigestillinger">www.acando.no/ledigestillinger</a></h4>
     </div>
   </Link>}
   sloganStyling={{bottom: '10%'}}
   ogSiteName="Acando"
   ogUrl={video2}
   ogVideoType="video/mp4"
-  ogTitle="Hva drømmer du om å bli?"
+  ogTitle="Få en lysende fremtid med oss!"
   ogDescription=""
   ogVideoWidth="1280"
   ogVideoHeight="720"
@@ -161,6 +163,7 @@ const Video3 = withRouter((props) => (<VideoAd
   slogan={<Link to="/landingpage">
     <div className="slogan-text-container">
       <h1 className="some-custom-classname">Hva drømmer du om å bli?</h1>
+      <h4><a href="http://www.acando.no/ledigestillinger">www.acando.no/ledigestillinger</a></h4>
     </div>
   </Link>}
   sloganStyling={{bottom: '10%'}}
@@ -187,6 +190,7 @@ const Video4 = withRouter((props) => (<VideoAd
   slogan={<Link to="/landingpage">
     <div className="slogan-text-container">
       <h1 className="some-custom-classname">Har du dybden som kreves?</h1>
+      <h4><a href="http://www.acando.no/ledigestillinger">www.acando.no/ledigestillinger</a></h4>
     </div>
   </Link>}
   sloganStyling={{bottom: '10%'}}

@@ -52,10 +52,24 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-flow: column;
   h1 {
     max-width: 320px;
     @media (min-width: 768px) {
       max-width: 500px;
+    }
+    margin-bottom: 30px;
+  }
+  .slogan-video-1 {
+    max-width: 260px;
+    @media (min-width: 768px) {
+      max-width: 320px;
+    }
+  }
+  .slogan-video-2 {
+    max-width: 320px;
+    @media (min-width: 768px) {
+      max-width: 520px;
     }
   }
 }
