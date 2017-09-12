@@ -8,6 +8,11 @@
   @media (min-width: 768px) {
     font-size: 32px;
   }
+  h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .media-ad-container {
@@ -56,20 +61,23 @@
   h1 {
     max-width: 320px;
     @media (min-width: 768px) {
-      max-width: 500px;
+      //max-width: 500px;
+      max-width: 1200px;
     }
     margin-bottom: 30px;
   }
   .slogan-video-1 {
     max-width: 260px;
     @media (min-width: 768px) {
-      max-width: 320px;
+      //max-width: 320px;
+      max-width: 1200px;
     }
   }
   .slogan-video-2 {
     max-width: 320px;
     @media (min-width: 768px) {
-      max-width: 520px;
+      //max-width: 520px;
+      max-width: 1200px;
     }
   }
 }
