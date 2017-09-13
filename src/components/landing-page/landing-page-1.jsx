@@ -15,7 +15,7 @@ const LandingPage1 = () => {
           <p>Acando er et brukerfokusert og teknologidrevet konsulentselskap. Teknologi driver forandring, men det er brukerens evne og ønske til å ta teknologien i bruk som skaper verdi. Vi forstår morgendagens drivkrefter og tilpasser dem dagens forhold. Vi skaper resultater der dagens virkelighet og fremtidens muligheter er i balanse.</p>
           <p>Med teknisk spisskompetanse og inngående innsikt i brukeratferd, skaper vi idéer, løsninger og mobiliserer organisasjoner til forandring. Ved å kombinere innovasjon og erfaring, utgjør vi en forskjell!</p>
           <p>Vi vokser og søker flere konsulenter som drømmer stort og ønsker å gå i dybden sammen med oss.</p>
-          <p>Sjekk ut våre ledige stillinger <a href="https://www.acando.no/acandonorge/ledige-stillinger/54842/ledige-stillinger">her</a></p>
+          <p><a href="https://www.acando.no/acandonorge/ledige-stillinger/54842/ledige-stillinger">Sjekk ut våre ledige stillinger</a></p>
         </div>
       </div>
     </div>
