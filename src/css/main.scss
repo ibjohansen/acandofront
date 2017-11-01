@@ -30,7 +30,8 @@ h1 {
 #app {
   width: inherit;
   height: inherit;
-  font-family: 'Raleway', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  //font-family: 'Raleway', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2em;
@@ -103,131 +104,198 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
 }
-  .animation-ad {
-    background-color: $color-coolgrey;
-    position: relative;
-    overflow: hidden;
-    h1 {
-      padding: 15px;
-    }
-    .animation-title-offset {
-      transform: translate3d(320px, 0, 0);
-    }
-    .animation-offset-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate3d(100%, 0, 0);
-    }
-    .animation-ad-container {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .landing-page {
-    background-color: $color-coolgrey;
+.animation-ad {
+  background-color: $color-coolgrey;
+  position: relative;
+  overflow: hidden;
+  h1 {
     padding: 15px;
   }
-  .main-container {
-    background-color: black;
+  .animation-title-offset {
+    transform: translate3d(320px, 0, 0);
+  }
+  .animation-offset-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  .animation-ad-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+.landing-page {
+  background-color: $color-coolgrey;
+  padding: 15px;
+}
 
-    .background-sky-container,
-    .background-stars-container {
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-    }
-    .background-sky {
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      // Set image without using src-set incase there is no browser support for it.
-      background-image: $bg-img-nightsky-medium;
-      // Use background with src-set.
-      background-image: $bg-img-nightsky;
-      background-repeat: no-repeat;
-      background-size: cover;
-      animation: MOVE-LEFT 100s linear infinite alternate;
-      @media (min-width: 414px) {
-        background-image: $bg-img-nightsky-medium;
-        background-image: $bg-img-nightsky;
-        animation: MOVE-LEFT 100s linear infinite alternate;
-      }
-      @media (min-width: 1024px) {
-        background-image: $bg-img-nightsky-large;
-        background-image: $bg-img-nightsky;
-        animation: MOVE-LEFT 120s linear infinite alternate;
-      }
-    }
+.landing-page-2 {
 
-    .background-stars {
-      position: absolute;
-      width: 200%;
-      height: 100%;
-      background-image: $bg-img-stars;
-      background-repeat: no-repeat;
-      background-size: cover;
-      animation: MOVE-RIGHT 80s linear infinite alternate;
-    }
+  color: $color-black;
 
-    .background-man {
-      position: absolute;
-      width: inherit;
-      height: inherit;
-      // Set image without using src-set incase there is no browser support for it.
-      background-image: $bg-img-man-medium;
-      // Use background with src-set.
-      background-image: $bg-img-man;
-      background-repeat: no-repeat;
-      // Width should be auto-adjusted and height should be about 30% of the screen.
-      background-size: auto 30%;
-      // All the way to the bottom and almost all the way to the right.
-      background-position: 90% 100%;
-      @media (min-width: 414px) {
-        background-image: $bg-img-man-medium;
-        background-image: $bg-img-man;
-      }
-      @media (min-width: 1024px) {
-        background-image: $bg-img-man-large;
-        background-image: $bg-img-man;
-      }
-    }
 
-    .ad1 {
-      position: absolute;
-      width: 50%;
-      bottom: 50%;
-      padding: 2%;
+  h2 {
+    font-size: 32px;
+    line-height: 1.12;
+
+    @media (min-width: 414px) {
     }
   }
-  .city-night-ad {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      h1, h3 {
-        margin: 0;
-        position: relative;
-        z-index: 10;
-        padding: 15px;
-      }
+
+  h3 {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.22;
+    color: $color-coolgrey;
+  }
+
+
+  .video-banner-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .video-banner {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .video-pointer-overlay {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    margin-top: -6px;
+    padding: 0;
+    position: relative;
+    background: transparent;
+    top: -50px;
+  }
+
+  .video-pointer-overlay__left,
+  .video-pointer-overlay__right {
+    position: absolute;
+    height: 50px;
+    width: 50%;
+    background: #fff;
+  }
+  .video-pointer-overlay__left {
+    left: -30px;
+    transform: skew(45deg);
+  }
+  .video-pointer-overlay__right {
+    right: -20px;
+    transform: skew(-45deg);
+  }
+
+}
+
+.main-container {
+  background-color: black;
+
+  .background-sky-container,
+  .background-stars-container {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .background-sky {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    // Set image without using src-set incase there is no browser support for it.
+    background-image: $bg-img-nightsky-medium;
+    // Use background with src-set.
+    background-image: $bg-img-nightsky;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: MOVE-LEFT 100s linear infinite alternate;
+    @media (min-width: 414px) {
+      background-image: $bg-img-nightsky-medium;
+      background-image: $bg-img-nightsky;
+      animation: MOVE-LEFT 100s linear infinite alternate;
     }
-    .city-night-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: $bg-city-night;
-      background-repeat: no-repeat;
-      background-position: 0% 0%;
-      background-size: cover;
-      width: 200%;
-      height: 100%;
-      z-index: 5;
-      //transition: transform 0.3s ease-out;
-      
+    @media (min-width: 1024px) {
+      background-image: $bg-img-nightsky-large;
+      background-image: $bg-img-nightsky;
+      animation: MOVE-LEFT 120s linear infinite alternate;
     }
+  }
+
+  .background-stars {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-image: $bg-img-stars;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: MOVE-RIGHT 80s linear infinite alternate;
+  }
+
+  .background-man {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    // Set image without using src-set incase there is no browser support for it.
+    background-image: $bg-img-man-medium;
+    // Use background with src-set.
+    background-image: $bg-img-man;
+    background-repeat: no-repeat;
+    // Width should be auto-adjusted and height should be about 30% of the screen.
+    background-size: auto 30%;
+    // All the way to the bottom and almost all the way to the right.
+    background-position: 90% 100%;
+    @media (min-width: 414px) {
+      background-image: $bg-img-man-medium;
+      background-image: $bg-img-man;
+    }
+    @media (min-width: 1024px) {
+      background-image: $bg-img-man-large;
+      background-image: $bg-img-man;
+    }
+  }
+
+  .ad1 {
+    position: absolute;
+    width: 50%;
+    bottom: 50%;
+    padding: 2%;
+  }
+}
+.city-night-ad {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  h1, h3 {
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    padding: 15px;
+  }
+}
+.city-night-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: $bg-city-night;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  width: 200%;
+  height: 100%;
+  z-index: 5;
+  //transition: transform 0.3s ease-out;
+  
+}
 
 .animation-container {
   position: relative;

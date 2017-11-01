@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import LandingPage1 from 'components/landing-page/landing-page-1';
+import LandingPageVideo from 'components/landing-page/landing-page-video';
 import VideoAd from 'components/video-ad/video-ad';
 import GifAd from 'components/gif-ad/gif-ad';
 import video1 from 'videos/tunnel.mp4';
@@ -223,6 +224,51 @@ const Video4 = withRouter((props) => (<VideoAd
   focusY={50}
 />));
 
+const adTexts = {
+  title: 'Har du dybden, eller sikter du mot stjernene? Liker du fart, og har du energien som trengs?',
+  subTitle: 'Vi vokser og søker konsulenter som vil være med på å utgjøre en forskjell!',
+  text: (<div className="text-container">
+    <p>Acando er et brukerfokusert og teknologidrevet konsulentselskap. Teknologi driver forandring, men det er brukerens evne og ønske til å ta teknologien i bruk som skaper verdi. Vi forstår morgendagens drivkrefter og tilpasser dem dagens forhold. Vi skaper resultater der dagens virkelighet og fremtidens muligheter er i balanse.</p>
+    <p>Med teknisk spisskompetanse og inngående innsikt i brukeratferd, skaper vi idéer, løsninger og mobiliserer organisasjoner til forandring. Ved å kombinere innovasjon og erfaring, utgjør vi en forskjell!</p>
+    <p>Vi vokser og søker flere konsulenter som drømmer stort og ønsker å gå i dybden sammen med oss.</p>
+    <p><a href="https://www.acando.no/acandonorge/ledige-stillinger/54842/ledige-stillinger">Sjekk ut våre ledige stillinger</a></p>
+  </div>)
+};
+
+const LandingPageDreamer = withRouter((props) => (
+  <LandingPageVideo
+    {...props}
+    {...adTexts}
+    mp4Url={video3}
+  />
+));
+
+const LandingPageAurora = withRouter((props) => (
+  <LandingPageVideo
+    {...props}
+    {...adTexts}
+    mp4Url={video2}
+  />
+));
+
+
+const LandingPageDivers = withRouter((props) => (
+  <LandingPageVideo
+    {...props}
+    {...adTexts}
+    mp4Url={video4}
+  />
+));
+
+const LandingPageTunnel = withRouter((props) => (
+  <LandingPageVideo
+    {...props}
+    {...adTexts}
+    mp4Url={video1}
+  />
+));
+
+
 
 const routes = (
   <div>
@@ -238,6 +284,10 @@ const routes = (
     <Route exact path="/tmpvideo3" component={Video3} />
     <Route exact path="/tmpvideo4" component={Video4} />
     <Route exact path="/landingpage" component={LandingPage1} />
+    <Route exact path="/landingpagetunnel" component={LandingPageTunnel} />
+    <Route exact path="/landingpagedreamer" component={LandingPageDreamer} />
+    <Route exact path="/landingpageaurora" component={LandingPageAurora} />
+    <Route exact path="/landingpagedivers" component={LandingPageDivers} />
   </div>
 );
 
