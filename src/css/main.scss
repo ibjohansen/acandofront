@@ -1,4 +1,5 @@
 @import '_vars.scss';
+@import '_button.scss';
 
 // Get proper box-sizing.
 html {
@@ -31,7 +32,7 @@ h1 {
   width: inherit;
   height: inherit;
   //font-family: 'Raleway', Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-family: Arial, sans-serif;
+  font-family: 'Moderat', Arial, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2em;
@@ -103,7 +104,9 @@ h1 {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 12px;
 }
+
 .animation-ad {
   background-color: $color-coolgrey;
   position: relative;
@@ -134,25 +137,37 @@ h1 {
 
   color: $color-black;
 
-
-  h2 {
+  h1 {
     font-size: 32px;
     line-height: 1.12;
+    margin-bottom: 35px;
 
     @media (min-width: 414px) {
+      margin-bottom: 25px;
     }
   }
 
-  h3 {
+  h2 {
     font-size: 18px;
     line-height: 1.22;
+    margin-bottom: 45px;
+
+    @media (min-width: 414px) {
+      margin-bottom: 35px;
+    }
   }
 
-  p {
-    font-size: 18px;
-    line-height: 1.22;
-    color: $color-coolgrey;
+  .text-container {
+    p,
+    a {
+      font-size: 18px;
+      line-height: 1.22;
+    }
+    p {
+      color: $color-coolgrey;
+    }
   }
+  
 
 
   .video-banner-container {
@@ -162,9 +177,13 @@ h1 {
 
   .video-banner {
     width: 100%;
-    height: auto;
+    height: 400px;
     padding: 0;
     margin: 0;
+    object-fit: cover;
+    @media (min-width: 414px) {
+      height: auto;
+    }
   }
 
   .video-pointer-overlay {
@@ -176,22 +195,33 @@ h1 {
     position: relative;
     background: transparent;
     top: -50px;
+    overflow: hidden;
   }
 
   .video-pointer-overlay__left,
   .video-pointer-overlay__right {
     position: absolute;
     height: 50px;
-    width: 50%;
+    width: 60%;
     background: #fff;
+
+    @media (min-width: 414px) {
+      width: 50%;
+    }
   }
   .video-pointer-overlay__left {
     left: -30px;
     transform: skew(45deg);
+    @media (min-width: 414px) {
+      left: -25px;
+    }
   }
   .video-pointer-overlay__right {
-    right: -20px;
+    right: -30px;
     transform: skew(-45deg);
+    @media (min-width: 414px) {
+      right: -25px;
+    }
   }
 
 }

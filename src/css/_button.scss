@@ -1,0 +1,21 @@
+@import '_vars.scss';
+
+.btn-container {
+  margin: 25px 0 35px;
+}
+
+.btn-container__centered {
+  text-align: center;
+}
+
+.btn {
+  background: $color-darkgrey;
+  color: $color-white;
+  border-radius: 20px;
+  padding: 12px 20px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

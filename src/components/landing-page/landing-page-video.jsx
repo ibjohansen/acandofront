@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 
-const LandingPageVideo = ({mp4Url, title, subTitle, text}) => {
+const LandingPageVideo = ({mp4Url, title, subTitle, text, styling}) => {
   return (
     <div className="landing-page-2">
       <Helmet>
@@ -15,6 +15,7 @@ const LandingPageVideo = ({mp4Url, title, subTitle, text}) => {
             muted={true}
             loop={true}
             playsInline={true}
+            style={styling}
           >
             <source
               src={mp4Url}
@@ -41,7 +42,8 @@ LandingPageVideo.propTypes = {
   mp4Url: PropTypes.any,
   title: PropTypes.string,
   subTitle: PropTypes.string,
-  text: PropTypes.object
+  text: PropTypes.object,
+  styling: PropTypes.object
 };
 
 export default LandingPageVideo;

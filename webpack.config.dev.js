@@ -84,6 +84,16 @@ const config = [
               name: 'images/[hash].[ext]'
             }
           }
+        },
+        {
+          test: /\.(ttf|woff)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              name: 'fonts/[hash].[ext]'
+            }
+          }
         }
       ]
     },
