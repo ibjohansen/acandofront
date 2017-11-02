@@ -48,6 +48,16 @@ const config = [
               name: 'images/[hash].[ext]'
             }
           }
+        },
+        {
+          test: /\.(ttf|woff)$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+              name: 'public/fonts/[name].[ext]'
+            }
+          }
         }
       ]
     },
@@ -125,6 +135,16 @@ const config = [
             options: {
               limit: 8192,
               name: 'images/[hash].[ext]'
+            }
+          }
+        },
+        {
+          test: /\.(ttf|woff)$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              limit: 8192,
+              name: 'public/fonts/[name].[ext]'
             }
           }
         }
