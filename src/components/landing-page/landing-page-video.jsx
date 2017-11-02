@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const LandingPageVideo = ({mp4Url, title, subTitle, text, styling}) => {
   return (
-    <div className="landing-page-2">
+    <div className="landing-page-video">
       <Helmet>
         <body className="is-landing-page" />
       </Helmet>
