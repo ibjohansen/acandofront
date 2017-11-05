@@ -242,7 +242,7 @@ const LandingPageDreamer = withRouter((props) => (
     {...props}
     {...adTexts}
     styling={{
-      objectPosition: '90% 50%'
+      objectPosition: '90% 60%'
     }}
     mp4Url={video3}
     videoSlogan="Hva drømmer du om å bli?"
@@ -254,6 +254,9 @@ const LandingPageAurora = withRouter((props) => (
   <LandingPageVideo
     {...props}
     {...adTexts}
+    styling={{
+      objectPosition: '50% 60%'
+    }}
     mp4Url={video2}
     videoSlogan="Få en lysende fremtid med oss!"
     videoSloganType="video-slogan-aurora"
