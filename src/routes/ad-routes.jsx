@@ -245,6 +245,8 @@ const LandingPageDreamer = withRouter((props) => (
       objectPosition: '90% 50%'
     }}
     mp4Url={video3}
+    videoSlogan="Hva drømmer du om å bli?"
+    videoSloganType="video-slogan-dreamer"
   />
 ));
 
@@ -253,6 +255,8 @@ const LandingPageAurora = withRouter((props) => (
     {...props}
     {...adTexts}
     mp4Url={video2}
+    videoSlogan="Få en lysende fremtid med oss!"
+    videoSloganType="video-slogan-aurora"
   />
 ));
 
@@ -262,6 +266,8 @@ const LandingPageDivers = withRouter((props) => (
     {...props}
     {...adTexts}
     mp4Url={video4}
+    videoSlogan="Har du dybden som kreves?"
+    videoSloganType="video-slogan-divers"
   />
 ));
 
@@ -270,6 +276,8 @@ const LandingPageTunnel = withRouter((props) => (
     {...props}
     {...adTexts}
     mp4Url={video1}
+    videoSlogan="Finn veien med oss!"
+    videoSloganType="video-slogan-tunnel"
   />
 ));
 
