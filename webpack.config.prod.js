@@ -21,6 +21,10 @@ const config = [
           NODE_ENV: JSON.stringify('production')
         }
       }),
+      new ExtractTextPlugin({
+        filename: 'client.css',
+        allChunks: true
+      }),
       new webpack.optimize.UglifyJsPlugin(),
       new webpack.optimize.OccurrenceOrderPlugin()
     ],
@@ -33,11 +37,13 @@ const config = [
         },
         {
           test: /\.scss$/,
-          use: [
-            'style-loader',
-            { loader: 'css-loader', options: { importLoaders: 1 } },
-            'postcss-loader'
-          ]
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: [
+              { loader: 'css-loader', options: { importLoaders: 1 } },
+              'postcss-loader'
+            ]
+          })
         },
         {
           test: /\.(png|jpg|mp4|webm|gif)$/,
@@ -113,19 +119,11 @@ const config = [
         {
           test: /\.scss$/,
           use: ExtractTextPlugin.extract({
-            fallback: 'isomorphic-style-loader',
-            use: [{
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                importLoaders: 1,
-                localIdentName: '[hash:base64:10]',
-                sourceMap: true
-              }
-            },
-            {
-              loader: 'postcss-loader'
-            }]
+            fallback: 'style-loader',
+            use: [
+              { loader: 'css-loader', options: { importLoaders: 1 } },
+              'postcss-loader'
+            ]
           })
         },
         {

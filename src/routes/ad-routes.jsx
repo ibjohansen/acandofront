@@ -237,6 +237,7 @@ const adTexts = {
   </div>)
 };
 
+
 const LandingPageDreamer = withRouter((props) => (
   <LandingPageVideo
     {...props}
@@ -245,6 +246,22 @@ const LandingPageDreamer = withRouter((props) => (
       objectPosition: '90% 60%'
     }}
     mp4Url={video3}
+    metadata={
+      {
+        ogSiteName: 'Hva drømmer du om å bli?',
+        ogUrl: {video3},
+        ogVideoType: 'video/mp4',
+        ogTitle: 'Hva drømmer du om å bli?',
+        ogDescription: '',
+        ogVideoWidth: '1280',
+        ogVideoHeight: '720',
+        ogImage: {gif3},
+        ogImageType: 'image/gif',
+        ogImageWidth: '600',
+        ogImageHeight: '338',
+        ogType: {gif3}
+      }
+    }
     videoSlogan="Hva drømmer du om å bli?"
     videoSloganType="video-slogan-dreamer"
   />
@@ -258,6 +275,22 @@ const LandingPageAurora = withRouter((props) => (
       objectPosition: '50% 60%'
     }}
     mp4Url={video2}
+    metadata={
+      {
+        ogSiteName: 'Få en lysende fremtid med oss!',
+        ogUrl: {video2},
+        ogVideoType: 'video/mp4',
+        ogTitle: 'Få en lysende fremtid med oss!',
+        ogDescription: '',
+        ogVideoWidth: '1280',
+        ogVideoHeight: '720',
+        ogImage: {gif2},
+        ogImageType: 'image/gif',
+        ogImageWidth: '1280',
+        ogImageHeight: '720',
+        ogType: {gif2}
+      }
+    }
     videoSlogan="Få en lysende fremtid med oss!"
     videoSloganType="video-slogan-aurora"
   />
@@ -269,6 +302,22 @@ const LandingPageDivers = withRouter((props) => (
     {...props}
     {...adTexts}
     mp4Url={video4}
+    metadata={
+      {
+        ogSiteName: 'Har du dybden som kreves?',
+        ogUrl: {video4},
+        ogVideoType: 'video/mp4',
+        ogTitle: 'Har du dybden som kreves?',
+        ogDescription: '',
+        ogVideoWidth: '1280',
+        ogVideoHeight: '720',
+        ogImage: {gif4},
+        ogImageType: 'image/gif',
+        ogImageWidth: '800',
+        ogImageHeight: '450',
+        ogType: {gif4}
+      }
+    }
     videoSlogan="Har du dybden som kreves?"
     videoSloganType="video-slogan-divers"
   />
@@ -279,6 +328,22 @@ const LandingPageTunnel = withRouter((props) => (
     {...props}
     {...adTexts}
     mp4Url={video1}
+    metadata={
+      {
+        ogSiteName: 'Finn veien med oss!',
+        ogUrl: {video1},
+        ogVideoType: 'video/mp4',
+        ogTitle: 'Finn veien med oss!',
+        ogDescription: '',
+        ogVideoWidth: '1280',
+        ogVideoHeight: '720',
+        ogImage: {gif1},
+        ogImageType: 'image/gif',
+        ogImageWidth: '800',
+        ogImageHeight: '450',
+        ogType: {gif1}
+      }
+    }
     videoSlogan="Finn veien med oss!"
     videoSloganType="video-slogan-tunnel"
   />
@@ -288,7 +353,7 @@ const LandingPageTunnel = withRouter((props) => (
 
 const routes = (
   <div>
-    <Route exact path="/" component={Video1} />
+    <Route exact path="/" component={LandingPageDreamer} />
     <Route exact path="/gif1" component={Gif1} />
     <Route exact path="/gif2" component={Gif2} />
     <Route exact path="/gif3" component={Gif3} />

@@ -15,8 +15,11 @@ export default function serverRenderer() {
         <App />
       </StaticRouter>
     );
+    //const head = Helmet.rewind();
     const helmet = Helmet.renderStatic();
+    const html = template({ markup, helmet });
 
-    res.status(200).send(template({ markup, helmet }));
+
+    res.status(200).send(html);
   };
 }
