@@ -249,17 +249,17 @@ const LandingPageDreamer = withRouter((props) => (
     metadata={
       {
         ogSiteName: 'Hva drømmer du om å bli?',
-        ogUrl: {video3},
+        ogUrl: video3,
         ogVideoType: 'video/mp4',
         ogTitle: 'Hva drømmer du om å bli?',
         ogDescription: '',
         ogVideoWidth: '1280',
         ogVideoHeight: '720',
-        ogImage: {gif3},
+        ogImage: gif3,
         ogImageType: 'image/gif',
         ogImageWidth: '600',
         ogImageHeight: '338',
-        ogType: {gif3}
+        ogType: gif3
       }
     }
     videoSlogan="Hva drømmer du om å bli?"
@@ -278,17 +278,17 @@ const LandingPageAurora = withRouter((props) => (
     metadata={
       {
         ogSiteName: 'Få en lysende fremtid med oss!',
-        ogUrl: {video2},
+        ogUrl: video2,
         ogVideoType: 'video/mp4',
         ogTitle: 'Få en lysende fremtid med oss!',
         ogDescription: '',
         ogVideoWidth: '1280',
         ogVideoHeight: '720',
-        ogImage: {gif2},
+        ogImage: gif2,
         ogImageType: 'image/gif',
         ogImageWidth: '1280',
         ogImageHeight: '720',
-        ogType: {gif2}
+        ogType: gif2
       }
     }
     videoSlogan="Få en lysende fremtid med oss!"
@@ -305,17 +305,17 @@ const LandingPageDivers = withRouter((props) => (
     metadata={
       {
         ogSiteName: 'Har du dybden som kreves?',
-        ogUrl: {video4},
+        ogUrl: video4,
         ogVideoType: 'video/mp4',
         ogTitle: 'Har du dybden som kreves?',
         ogDescription: '',
         ogVideoWidth: '1280',
         ogVideoHeight: '720',
-        ogImage: {gif4},
+        ogImage: gif4,
         ogImageType: 'image/gif',
         ogImageWidth: '800',
         ogImageHeight: '450',
-        ogType: {gif4}
+        ogType: gif4
       }
     }
     videoSlogan="Har du dybden som kreves?"
@@ -331,17 +331,17 @@ const LandingPageTunnel = withRouter((props) => (
     metadata={
       {
         ogSiteName: 'Finn veien med oss!',
-        ogUrl: {video1},
+        ogUrl: video1,
         ogVideoType: 'video/mp4',
         ogTitle: 'Finn veien med oss!',
         ogDescription: '',
         ogVideoWidth: '1280',
         ogVideoHeight: '720',
-        ogImage: {gif1},
+        ogImage: gif1,
         ogImageType: 'image/gif',
         ogImageWidth: '800',
         ogImageHeight: '450',
-        ogType: {gif1}
+        ogType: gif1
       }
     }
     videoSlogan="Finn veien med oss!"
