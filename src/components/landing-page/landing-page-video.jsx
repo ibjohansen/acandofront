@@ -18,20 +18,20 @@ const LandingPageVideo = ({location, mp4Url, title, subTitle, text, styling, vid
     <div className="landing-page-video">
       <Helmet
         meta={[
-          { name: 'og:site_name', content: ogSiteName },
-          { name: 'og:type', content: 'video' },
-          { name: 'og:url', content: `${urlPrefix}${location.pathname}${cacheBusting}` },
-          { name: 'og:title', content: ogTitle },
-          { name: 'og:description', content: ogDescription },
-          { name: 'og:type', content: 'article' },
-          { name: 'og:video', content: `${urlPrefix}${mp4Url}${cacheBusting}` },
-          { name: 'og:video:secure_url', content: `${urlPrefix}${mp4Url}${cacheBusting}` },
-          { name: 'og:video:type', content: ogVideoType },
-          { name: 'og:video:width', content: ogVideoWidth },
-          { name: 'og:video:height', content: ogVideoHeight },
-          { name: 'og:image', content: `${urlPrefix}${ogImage}${cacheBusting}` },
-          { name: 'og:image:width', content: ogImageWidth },
-          { name: 'og:image:height', content: ogImageHeight }
+          { property: 'og:site_name', content: ogSiteName },
+          { property: 'og:type', content: 'video' },
+          { property: 'og:url', content: `${urlPrefix}${location.pathname}${cacheBusting}` },
+          { property: 'og:title', content: ogTitle },
+          { property: 'og:description', content: ogDescription },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:video', content: `${urlPrefix}${mp4Url}${cacheBusting}` },
+          { property: 'og:video:secure_url', content: `${urlPrefix}${mp4Url}${cacheBusting}` },
+          { property: 'og:video:type', content: ogVideoType },
+          { property: 'og:video:width', content: ogVideoWidth },
+          { property: 'og:video:height', content: ogVideoHeight },
+          { property: 'og:image', content: `${urlPrefix}${ogImage}${cacheBusting}` },
+          { property: 'og:image:width', content: ogImageWidth },
+          { property: 'og:image:height', content: ogImageHeight }
         ]}
       >
         <body className="is-landing-page" />
